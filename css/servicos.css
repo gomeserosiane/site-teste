@@ -113,9 +113,10 @@
 
 .card-buttons {
   display: flex;
-  justify-content: space-between;
+  justify-content: center; /* ou flex-start */
+  gap: 32px;               /* espaçamento ENTRE os botões */
   margin: 10px 0 25px;
-  padding: 0 250px;
+  padding: 0 180px;
 }
 
 .btn-info {
@@ -131,6 +132,24 @@
 .btn-info:hover {
   background: #4f9bff;
   color: #fff;
+}
+
+.btn-imoveis-site {
+  background-color: #4f9bff;
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  text-decoration: none;
+}
+
+.btn-imoveis-site:hover {
+  background: #fffc4f;
 }
 
 .btn-whats {
