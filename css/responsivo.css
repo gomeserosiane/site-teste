@@ -1,0 +1,418 @@
+@media (max-width: 768px) {
+
+  /***** SEÇÃO HEADER *****/
+  .container img {
+    width: 70px;
+  }
+
+  .logo {
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.2;
+    padding-right: 30px;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .desktop-menu {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .container img {
+    width: 80px;
+  }
+
+  .logo {
+    font-size: 1rem;
+    padding-left: 10px;
+  }
+
+  /* botão X dentro do menu mobile */
+  .close-menu {
+    position: absolute;
+    top: 20px;
+    right: 240px;
+    /* antes era right, agora esquerda */
+    background: none;
+    border: none;
+    color: red;
+    font-size: 26px;
+    cursor: pointer;
+  }
+
+  /* espaço entre o X e os links */
+  #mobile-menu ul {
+    margin-top: 70px;
+    /* aumenta o espaço para o X */
+  }
+
+  #mobile-menu img {
+    width: 250px;
+    margin: 80px 0 50px;
+  }
+
+  #mobile-menu p {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #fff;
+  }
+
+  /***** SEÇÃO HERO *****/
+  .hero {
+    padding: 60px 20px;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .social-links img {
+    width: 45px;
+  }
+
+  .cards-container {
+    grid-template-columns: 1fr !important;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .card-buttons .btn {
+    font-size: 15px;
+    padding: 12px;
+  }
+
+  .card-buttons .btn-whats .whatsapp-icon img {
+    width: 18px;
+    height: 18px;
+  }
+
+  .video-container iframe {
+    width: 100%;
+    height: 260px;
+  }
+
+  /***** SEÇÃO SOBRE *****/
+  .sobre p.primeira-linha {
+    padding: 0 20px;
+    text-align: center;
+  }
+
+  .sobre-conteudo {
+    flex-direction: column;
+    padding: 0 20px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .sobre-conteudo p {
+    text-align: left;
+    font-size: 1.1rem;
+    padding: 0;
+  }
+
+  .sobre-conteudo img {
+    width: 300px;
+    text-align: center;
+    height: auto;
+    flex-shrink: 0;
+    /* Impede a imagem de ser empurrada */
+    display: block;
+  }
+
+  /***** SEÇÃO SERVIÇOS *****/
+  .slider-wrapper {
+    display: flex;
+  }
+
+  .slider-btn {
+    margin: 0 15px;
+    font-size: 60px;
+    width: 35px;
+    height: 90px;
+  }
+
+  .cards-container {
+    gap: 40px;
+    /* remove espaçamento lateral */
+    padding: 20px;
+    /* remove padding das laterais */
+    scroll-snap-type: x mandatory;
+    overflow-x: auto;
+  }
+
+  .card {
+    flex: 0 0 90%;
+    scroll-snap-align: center;
+    /* centraliza perfeitamente */
+    margin: 0 auto;
+    /* garante centralização */
+    max-width: 100%;
+  }
+
+  .card-front img {
+    height: 180px;
+  }
+
+  .card-content h2 {
+    font-size: 1.4rem;
+  }
+
+  .card-content p {
+    font-size: 1.1rem;
+  }
+
+  /* --- BOTÕES DO MESMO TAMANHO --- */
+  .card-buttons {
+    flex-direction: column;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .card-buttons .btn-info,
+  .card-buttons .btn-whats {
+    width: 100%;
+    text-align: center;
+    padding: 12px;
+    font-size: 1rem;
+
+    align-items: center;
+    justify-content: center;
+  }
+
+  .whatsapp-icon img {
+    width: 20px;
+    height: 20px;
+  }
+
+  /***** SEÇÃO SERVIÇOS (SLIDER) *****/
+
+  .slider-modal {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999999999;
+    background: rgba(0, 0, 0, 0.7);
+    overflow: hidden;
+  }
+
+  .slider-content {
+    max-width: 95%;
+    max-height: 70%;
+    padding: 10px;
+  }
+
+  .slider-images img {
+    max-width: 100%;
+    max-height: 60vh;
+  }
+
+  .close-btn {
+    top: 120px;
+    right: 10%;
+    width: 40px;
+    height: 40px;
+    font-size: 28px;
+    border-width: 1.5px;
+  }
+
+  .arrow {
+    width: 30px;
+    height: 80px;
+    padding: 10px;
+    font-size: 26px;
+    font-weight: bold;
+    top: 45% !important;
+    transform: none !important;
+  }
+
+  .left-arrow {
+    left: 15px;
+  }
+
+  .right-arrow {
+    right: 15px;
+  }
+
+  .btn-whats-slider {
+    position: absolute;
+    width: 230px;
+    font-size: 18px;
+    gap: 10px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    bottom: 6%;
+    /* altura perfeita para ficar entre as setas */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2000;
+  }
+
+  .btn-whats-slider:hover {
+    color: #000;
+    background-color: #25D366;
+  }
+
+  /***** SEÇÃO OUTROS-SERVIÇOS *****/
+
+  .card-servico {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .card-servico h3 {
+    font-size: 1.4rem;
+  }
+
+  .card-servico p {
+    font-size: 1.1rem;
+  }
+
+  .botoes-card {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .btn-info-outros,
+  .btn-whats-outros {
+    width: 100%;
+    flex: unset;
+  }
+
+  .close-btn-outros {
+    top: 200px;
+    right: 25px;
+  }
+
+  .arrow {
+    padding: 10px;
+    font-size: 26px;
+    top: auto;
+    bottom: 40px;
+    transform: none;
+  }
+
+  .left-arrow-outros {
+    top: 330px;
+    left: 8px;
+    height: 90px;
+  }
+
+  .right-arrow-outros {
+    top: 330px;
+    right: 8px;
+    height: 90px;
+  }
+
+  .video-container iframe {
+    width: 100%;
+    height: 100%;
+  }
+
+  /***** SEÇÃO PARCEIROS *****/
+  .parceiros {
+    padding: 60px 30px;
+  }
+
+  .carousel-track img {
+    width: 80px;
+  }
+
+  /***** SEÇÃO CONTATO *****/
+  .contato {
+    padding: 60px 50px;
+    background: #fff;
+    display: flex;
+    /* muda para 1 coluna */
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .contato>h2,
+  .contato>p,
+  .contato>img,
+  .contato>form {
+    width: 100%;
+    padding-left: 0;
+    /* remove o deslocamento */
+    grid-column: auto;
+    /* impede bug do grid */
+  }
+
+  .contato img {
+    display: none;
+  }
+
+  .contato h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #222;
+    text-align: center;
+  }
+
+  .contato p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .contato form {
+    width: 100%;
+    margin-top: 0;
+    /* remove posição quebrada */
+  }
+
+  form {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  /***** SEÇÃO FOOTER *****/
+  .rodape {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  /***** BOTÃO FLUTUANTE DO WHATSAPP *****/
+  .whatsapp-container a {
+    background-color: #25d366;
+    padding: 10px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .whatsapp-container img {
+    width: 45px;
+    height: 45px;
+  }
+
+  .whatsapp-container a:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.35);
+  }
+}

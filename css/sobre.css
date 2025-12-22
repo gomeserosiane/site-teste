@@ -1,0 +1,72 @@
+/* ===============================
+   SEÇÕES PADRÃO
+   =============================== */
+.sobre,
+.servicos {
+  padding: clamp(40px, 8vw, 80px) 20px;
+  text-align: center;
+  width: 100%;
+}
+
+/* TÍTULOS */
+.sobre h2,
+.servicos h2 {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: bold;
+  margin-bottom: clamp(20px, 5vw, 30px);
+}
+
+/* ===============================
+   CONTEÚDO SOBRE
+   =============================== */
+.sobre-conteudo {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: clamp(20px, 4vw, 40px);
+  padding: 0 clamp(15px, 6vw, 80px);
+  box-sizing: border-box;
+}
+
+/* TEXTO */
+.sobre-conteudo p {
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  line-height: 1.6;
+  text-align: left;
+
+  width: 100%;
+  max-width: 900px;
+}
+
+/* IMAGEM */
+.sobre-conteudo img {
+  width: clamp(200px, 40vw, 300px);
+  height: auto;
+  display: block;
+}
+
+/* ===============================
+   DESKTOP (TEXTO + IMAGEM LADO A LADO)
+   =============================== */
+@media (min-width: 900px) {
+  .sobre-conteudo {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  .sobre-conteudo p {
+    flex: 1;
+  }
+
+  .sobre-conteudo img {
+    flex-shrink: 0;
+  }
+}

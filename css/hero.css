@@ -1,0 +1,93 @@
+/* ===============================
+   HERO
+   =============================== */
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+
+  padding: clamp(80px, 12vh, 140px) 20px;
+  text-align: center;
+
+  /* IMAGEM DE FUNDO */
+  background-image: url('/images-banner/negociacoes.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  color: #fff;
+}
+
+/* Overlay para leitura */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+  z-index: 0;
+}
+
+/* Conteúdo acima do overlay */
+.hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* FOTO */
+.hero .foto {
+  width: clamp(120px, 25vw, 180px);
+  height: clamp(120px, 25vw, 180px);
+  object-fit: cover;
+  margin-bottom: clamp(15px, 3vw, 20px);
+}
+
+/* TÍTULO */
+.hero h1 {
+  font-size: clamp(1.8rem, 5vw, 3rem);
+  font-weight: bold;
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+
+/* DESTAQUE */
+.hero span {
+  color: #4f9bff;
+  -webkit-text-stroke: clamp(1px, 0.15vw, 1.5px) #fff;
+}
+
+/* SUBTEXTO */
+.hero p {
+  font-size: clamp(1.1rem, 3.5vw, 2rem);
+  font-weight: bold;
+  max-width: min(90%, 600px);
+  margin: 0 auto clamp(20px, 5vw, 30px);
+}
+
+/* ===============================
+   REDES SOCIAIS
+   =============================== */
+.social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(20px, 6vw, 50px);
+  margin-top: clamp(20px, 5vw, 50px);
+}
+
+.social-links a {
+  display: inline-flex;
+  transition: transform 0.3s ease;
+}
+
+.social-links a:hover {
+  transform: translateY(-5px);
+}
+
+.social-links img {
+  width: clamp(40px, 8vw, 60px);
+}
