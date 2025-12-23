@@ -1,4 +1,3 @@
-
 .servicos {
   padding: 50px 20px;
   background: #FFF;
@@ -28,7 +27,13 @@
 }
 
 .cards-container {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.cards-container {
   display: flex;
+  align-items: flex-start;
   gap: 130px;
   overflow-x: auto;
   scroll-behavior: smooth;
@@ -41,15 +46,10 @@
   display: none;
 }
 
-.cards-container {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
 /* Setas laterais do slider */
 .slider-btn {
   position: absolute;
-  top: 50%;
+  top: 25%;
   transform: translateY(-50%);
   z-index: 20;
   background: #4f9bffb2;
@@ -113,8 +113,10 @@
 
 .card-buttons {
   display: flex;
-  justify-content: center; /* ou flex-start */
-  gap: 32px;               /* espaçamento ENTRE os botões */
+  justify-content: center;
+  /* ou flex-start */
+  gap: 32px;
+  /* espaçamento ENTRE os botões */
   margin: 10px 0 25px;
   padding: 0 180px;
 }
@@ -195,7 +197,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  
+
 }
 
 /****** CONTEÚDO DO SLIDER ******/
@@ -304,4 +306,169 @@
 .btn-whats-slider:hover {
   color: #000;
   background-color: #25D366;
+}
+
+
+
+/* ===== IMÓVEIS ===== */
+.imoveis-title {
+  margin: 20px 0 10px;
+  text-align: center;
+}
+
+/* CARROSSEL INFINITO */
+.imoveis-carousel {
+  overflow: hidden;
+}
+
+.imoveis-track {
+  display: flex;
+  gap: 40px;
+  padding: 40px;
+  animation: slide 20s linear infinite;
+}
+
+.imoveis-track:hover {
+  animation-play-state: paused;
+}
+
+.imovel-item {
+  min-width: 240px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px 2px #0000001a;
+  border-radius: 8px;
+}
+
+.imovel-item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.imovel-item span {
+  display: block;
+  text-align: center;
+  margin: 5px 0;
+  font-weight: bold;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(20%);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.btn-veja-mais {
+  background: #4f9bff;
+  color: #fff;
+  font-weight: bold;
+}
+
+.btn-veja-mais:hover {
+  background: #fffc4f;
+  color: #000;
+}
+
+/* ===== MODAL ===== */
+.imovel-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, .7);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+}
+
+.imovel-modal-content {
+  width: 70%;
+  background: #fff;
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+/* SLIDER */
+.imovel-slider {
+  width: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imovel-slider img {
+  width: 80%;
+  border-radius: 10px;
+}
+
+.slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.slider-arrow.left {
+  left: 5px;
+}
+
+.slider-arrow.right {
+  right: 5px;
+}
+
+/* INFO */
+.imovel-info {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.imovel-info h3 {
+  font-weight: bold;
+}
+
+.imovel-info .close-btn-imovel {
+  position: absolute;
+  top: 56px;
+  right: 152px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #000;
+  background: #ff4d4d;
+  color: #fff;
+  font-size: 26px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 10001;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imovel-info .close-btn-imovel:hover {
+  background: rgba(255, 0, 0, 0.61);
+}
+
+.imovel-info p {
+  margin: 10px 0;
+  text-align: left;
+}
+
+/* BOTÕES */
+.imovel-buttons {
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }

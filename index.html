@@ -83,7 +83,6 @@
   <link rel="stylesheet" href="css/sobre.css?=17">
   <link rel="stylesheet" href="css/servicos.css?=17">
   <link rel="stylesheet" href="css/outros-servicos.css?=17">
-  <link rel="stylesheet" href="css/imoveis.css">
   <link rel="stylesheet" href="css/parceiros.css?=1">
   <link rel="stylesheet" href="css/contato.css?=17">
   <link rel="stylesheet" href="css/responsivo.css?=17">
@@ -244,21 +243,102 @@
         </div>
 
         <!-- CARD IMÓVEIS -->
-        <div class="card" data-aos="fade-left">
+        <div class="card card-imoveis" data-aos="fade-left">
           <div class="card-front">
             <img src="images-banner/banner-imobiliaria.png" alt="Serviço 6 - Imóveis">
+
             <div class="card-content">
-              <h2>Imóveis</h2>
+              <h2>Serviços Imobiliários</h2>
               <p>Vendas, Aluguéis, Administração e Legalização de imóveis.</p>
+
               <div class="card-buttons">
                 <button class="btn btn-info" data-card="5">Mais informações</button>
-                <a href="https://gomeserosiane.com.br" target="_blank" class="btn btn-imoveis-site">Confira nossos Imóveis</a>
                 <a href="https://wa.me/5591999635260" target="_blank" class="btn btn-whats">
                   Entre em contato <span class="whatsapp-icon"><img src="images-icons/icons8-whatsapp-96.png"
                       alt=""></span>
                 </a>
               </div>
+
+              <!-- NOVO H2 -->
+              <h2 class="imoveis-title">Confira nossos Imóveis Disponíveis</h2>
+
+              <!-- CARROSSEL INFINITO -->
+              <div class="imoveis-carousel">
+                <div class="imoveis-track">
+                  <div class="imovel-item" data-imovel="0">
+                    <img src="images-imoveis/casa-marambaia-img1.png">
+                    <span>Apartamento - Marambaia</span>
+                  </div>
+
+                  <div class="imovel-item" data-imovel="1">
+                    <img src="images-imoveis/casa-souza-img1.png">
+                    <span>Casa - Souza</span>
+                  </div>
+
+                  <div class="imovel-item" data-imovel="2">
+                    <img src="images-imoveis/ponto-comercial-pedreira-img1.png">
+                    <span>Ponto Comercial - Pedreira</span>
+                  </div>
+
+                  <div class="imovel-item" data-imovel="3">
+                    <img src="images-imoveis/casa-marambaia-img1.png">
+                    <span>Apartamento - Marambaia</span>
+                  </div>
+
+                  <div class="imovel-item" data-imovel="4">
+                    <img src="images-imoveis/casa-souza-img1.png">
+                    <span>Casa - Souza</span>
+                  </div>
+
+                  <div class="imovel-item" data-imovel="5">
+                    <img src="images-imoveis/ponto-comercial-pedreira-img1.png">
+                    <span>Ponto Comercial - Pedreira</span>
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="card-buttons">
+                <a href="https://gomeserosiane.com.br" target="_blank" class="btn btn-veja-mais">
+                  Veja mais detalhes
+                </a>
+              </div>
+
             </div>
+          </div>
+        </div>
+
+        <!-- MODAL IMÓVEL -->
+        <div class="imovel-modal">
+          <div class="imovel-modal-content">
+
+            <!-- CARROSSEL ESQUERDA -->
+            <div class="imovel-slider">
+              <button class="slider-arrow left">‹</button>
+              <img id="sliderImage">
+              <button class="slider-arrow right">›</button>
+            </div>
+
+            <!-- CONTEÚDO DIREITA -->
+            <div class="imovel-info">
+              <h3 id="imovelSubtitulo"></h3>
+              <button class="close-btn-imovel">×</button>
+
+              <p id="imovelDescricao1"></p>
+              <p id="imovelDescricao2"></p>
+              <p id="imovelDescricao3"></p>
+
+              <div class="imovel-buttons">
+                <a href="https://gomeserosiane.com.br" target="_blank" class="btn btn-info">Saiba mais</a>
+                <a href="https://wa.me/5591999635260" target="_blank" class="btn btn-whats">
+                  Entre em contato
+                  <span class="whatsapp-icon">
+                    <img src="images-icons/icons8-whatsapp-96.png">
+                  </span>
+                </a>
+              </div>
+            </div>
+
           </div>
         </div>
 
@@ -419,253 +499,6 @@
 
   </section>
 
-  <section class="imoveis">
-
-    <!-- BOTÃO INICIAL -->
-    <button class="btn-imoveis" id="btnImoveis">
-      Confira nossos imóveis
-    </button>
-
-    <!-- CONTEÚDO DOS IMÓVEIS -->
-    <div class="imoveis-content" id="imoveisContent">
-      <h1>Confira nossos Imóveis</h1>
-
-      <!-- BOTÃO VOLTAR (TOPO ESQUERDO) -->
-      <button class="btn-voltar" id="btnVoltar">
-        <span class="arrow-icon">←</span>
-        Voltar para o site
-      </button>
-
-      <div class="imovel-card">
-
-        <img src="images-carousel/carousel-status.png" alt="">
-
-        <div class="mini-grid">
-
-          <!-- LINHA 1 -->
-          <div class="mini-row-wrapper">
-            <button class="mini-arrow left">‹</button>
-
-            <div class="mini-row">
-              <div class="mini-track">
-                <div class="mini-card">
-                  <img src="images-imoveis/01-academia.png">
-                  <span>Academia</span>
-                </div>
-                <!-- CARD 1 -->
-
-                <div class="mini-card">
-                  <img src="images-imoveis/02-administracao.png">
-                  <span>Administração</span>
-                </div>
-                <!-- CARD 2 -->
-
-                <div class="mini-card">
-                  <img src="images-imoveis/03-brinquedoteca.png">
-                  <span>Brinquedoteca</span>
-                </div>
-                <!-- CARD 3 -->
-
-                <div class="mini-card">
-                  <img src="images-imoveis/04-cafe-bistro.png">
-                  <span>Café Bistrô</span>
-                </div>
-                <!-- CARD 4 -->
-
-                <div class="mini-card">
-                  <img src="images-imoveis/05-lavanderia.png">
-                  <span>Lavanderia</span>
-                </div>
-                <!-- CARD 5 -->
-
-                <div class="mini-card">
-                  <img src="images-imoveis/06-coworking.png">
-                  <span>Co-working</span>
-                </div>
-                <!-- CARD 6 -->
-
-                <div class="mini-card">
-                  <img src="images-imoveis/07-espaco-mulher.png">
-                  <span>Espaço Mulher</span>
-                </div>
-                <!-- CARD 7 -->
-
-                <div class="mini-card">
-                  <img src="images-imoveis/08-salao-de-festas.png">
-                  <span>Salão de Festas</span>
-                </div>
-                <!-- CARD 8 -->
-
-                <div class="mini-card">
-                  <img src="images-imoveis/09-salao-de-jogos.png">
-                  <span>Salão de jogos</span>
-                </div>
-                <!-- CARD 9 -->
-
-                <div class="mini-card">
-                  <img src="images-imoveis/10-spa.png">
-                  <span>Spá</span>
-                </div>
-                <!-- CARD 10 -->
-              </div>
-            </div>
-
-            <button class="mini-arrow right">›</button>
-          </div>
-
-          <!-- LINHA 2 -->
-          <div class="mini-row-wrapper">
-            <button class="mini-arrow left">‹</button>
-
-            <div class="mini-row">
-              <div class="mini-track">
-                <div class="mini-card">
-                  <img src="images-imoveis/11-vestiario.png">
-                  <span>Vestiário</span>
-                </div>
-                <!-- CARD 11 -->
-
-                <div class="mini-card">
-                  <img src="images-imoveis/12-campo-infantil.png">
-                  <span>Campo Infantil</span>
-                </div>
-                <!-- CARD 12 -->
-
-                <div class="mini-card">
-                  <img src="images-imoveis/13-car-wash.png">
-                  <span>Car Wash</span>
-                </div>
-                <!-- CARD 13 -->
-
-                <div class="mini-card">
-                  <img src="images-imoveis/14-churrasqueira-tipo1.png">
-                  <span>Churrasqueira 1</span>
-                </div>
-                <!-- CARD 14 -->
-
-                <div class="mini-card">
-                  <img src="images-imoveis/15-churrasqueira-tipo2.png">
-                  <span>Churrasqueira 2</span>
-                </div>
-                <!-- CARD 15 -->
-
-                <div class="mini-card">
-                  <img src="images-imoveis/16-bike.png">
-                  <span>Espaço para Bicicletas</span>
-                </div>
-                <!-- CARD 16 -->
-
-                <div class="mini-card">
-                  <img src="images-imoveis/17-ponto-carregamento-carro-eletrico.png">
-                  <span>Carregamento Elétrico</span>
-                </div>
-                <!-- CARD 17 -->
-
-                <div class="mini-card">
-                  <img src="images-imoveis/18-predio-multiuso.png">
-                  <span>Vestiário</span>
-                </div>
-                <!-- CARD 18 -->
-
-                <div class="mini-card">
-                  <img src="images-imoveis/19-predio-multiuso.png">
-                  <span>Prédio multiuso</span>
-                </div>
-                <!-- CARD 19 -->
-
-                <div class="mini-card">
-                  <img src="images-imoveis/20-geral.png">
-                  <span>Área Geral</span>
-                </div>
-                <!-- CARD 20 -->
-              </div>
-            </div>
-
-            <button class="mini-arrow right">›</button>
-          </div>
-
-          <!-- LINHA 3 -->
-          <div class="mini-row-wrapper">
-            <button class="mini-arrow left">‹</button>
-
-            <div class="mini-row">
-              <div class="mini-track">
-                <div class="mini-card">
-                  <img src="images-imoveis/21-portaria.png">
-                  <span>Portaria</span>
-                </div>
-                <!-- CARD 21 -->
-
-                <div class="mini-card">
-                  <img src="images-imoveis/22-implantacao.png">
-                  <span>Implantação</span>
-                </div>
-                <!-- CARD 22 -->
-
-                <div class="mini-card">
-                  <img src="images-imoveis/23-lazer-geral.png">
-                  <span>Lazer Geral</span>
-                </div>
-                <!-- CARD 23 -->
-
-                <div class="mini-card">
-                  <img src="images-imoveis/24-petplace.png">
-                  <span>Área para Pets</span>
-                </div>
-                <!-- CARD 24 -->
-
-                <div class="mini-card">
-                  <img src="images-imoveis/25-piscina.png">
-                  <span>Piscina</span>
-                </div>
-                <!-- CARD 25 -->
-
-                <div class="mini-card">
-                  <img src="images-imoveis/26-piscina.png">
-                  <span>Piscina</span>
-                </div>
-                <!-- CARD 26 -->
-
-                <div class="mini-card">
-                  <img src="images-imoveis/27-piscina-infantil.png">
-                  <span>Piscina Infantil</span>
-                </div>
-                <!-- CARD 27 -->
-
-                <div class="mini-card">
-                  <img src="images-imoveis/28-playground.png">
-                  <span>Playground</span>
-                </div>
-                <!-- CARD 28 -->
-
-                <div class="mini-card">
-                  <img src="images-imoveis/29-beach-tennis.png">
-                  <span>Beach Tennis</span>
-                </div>
-                <!-- CARD 29 -->
-
-                <div class="mini-card">
-                  <img src="images-imoveis/30-quadra-poliesportiva.png">
-                  <span>Quadra Poliesportiva</span>
-                </div>
-                <!-- CARD 30 -->
-              </div>
-            </div>
-            <button class="mini-arrow right">›</button>
-          </div>
-
-        </div>
-
-        <h2>Apartamento de Alto Padrão</h2>
-        <p>
-          Imóvel moderno em localização privilegiada, com 3 quartos,
-          suíte, varanda gourmet e excelente iluminação natural.
-        </p>
-
-      </div>
-    </div>
-  </section>
-
   <section class="parceiros">
     <h2>Nossos parceiros</h2>
 
@@ -781,9 +614,9 @@
   <script src="js/script.js?=17"></script>
   <script src="js/slider-wrapper.js?=13"></script>
   <script src="js/slider-servicos.js?=18"></script>
+  <script src="js/imoveis.js"></script>
   <script src="js/formulario-contato.js?=17"></script>
   <script src="js/slider-outros-servicos.js?=17"></script>
-  <script src="js/imoveis.js"></script>
   <script src="js/menu-mobile.js?=17"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="js/aos.js?=17"></script>
