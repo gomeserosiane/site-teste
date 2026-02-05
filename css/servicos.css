@@ -374,6 +374,18 @@
   display: inline-block;
   margin-top: 6px;
   padding: 4px 50px;
+  background-color: #00c24a;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.imovel-item .imovel-status3 {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 4px 50px;
   background-color: #c2001a;
   color: #fff;
   font-size: 16px;
@@ -550,4 +562,20 @@ body.modal-open {
 .btn-whats-imovel-modal:hover {
   background: #1ca34e;
   color: #fff;
+}
+
+.btn-indisponivel-modal {
+  display: none;
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  background: #c2001a;
+  color: #fff;
+  font-weight: bold;
+  cursor: not-allowed;
+}
+
+.btn-indisponivel-modal:hover {
+  background: #740010;
 }

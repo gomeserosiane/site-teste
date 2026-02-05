@@ -13,6 +13,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const closeBtn = document.querySelector('.close-btn-imovel');
   const items = document.querySelectorAll('.imovel-item');
 
+  const imovelButtons = document.querySelector('.imovel-buttons');
+  const indisponivelBtn = document.querySelector('.btn-indisponivel-modal');
+
   /* ===== DADOS DOS IMÓVEIS ===== */
   const imoveis = {
     0: {
@@ -94,6 +97,15 @@ document.addEventListener('DOMContentLoaded', () => {
       const id = item.dataset.imovel;
       const imovel = imoveis[id];
       if (!imovel) return;
+
+      /* MOSTRAR / ESCONDER BOTÕES */
+      if (id == 2 || id == 5) {
+        imovelButtons.style.display = 'none';
+        indisponivelBtn.style.display = 'block';
+      } else {
+        imovelButtons.style.display = 'flex';
+        indisponivelBtn.style.display = 'none';
+      }
 
       imagensAtuais = imovel.imagens;
       index = 0;
