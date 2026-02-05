@@ -1,0 +1,39 @@
+.sobre, .servicos {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+/****** SEÇÃO SOBRE ******/
+.sobre h2, .servicos h2 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* Só o primeiro parágrafo recebe padding */
+.sobre-conteudo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 0 80px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.sobre-conteudo p {
+    flex: 1;              /* Ocupa todo o espaço disponível */
+    min-width: 0;         /* Impede expansão infinita que empurra a imagem */
+    text-align: start;
+    padding: 0;
+    font-size: 1.2rem;
+}
+
+.sobre-conteudo img {
+    width: 320px;
+    max-width: 100%;
+    text-align: center;
+    height: auto;
+    flex-shrink: 0;       /* Impede a imagem de ser empurrada */
+    display: block;
+}

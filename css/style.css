@@ -1,0 +1,121 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fefefe;
+  color: #333;
+  line-height: 1.6;
+}
+
+.no-scroll {
+  overflow: hidden !important;
+  height: 100vh;
+}
+
+/*
+footer {
+  background: #f3f3f3;
+  padding: 20px;
+  text-align: center;
+  font-size: 0.9rem;
+}*/
+
+footer {
+  background: #f3f3f3;
+  color: #555;
+  padding: 40px 20px 20px;
+}
+
+.rodape {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 120px;
+  margin-bottom: 20px;
+  font-size: 18px;
+  width: 90%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.rodape h3 {
+  color: #222;
+  margin-bottom: 10px;
+  font-size: 1.6rem;
+}
+
+.rodape p {
+  font-size: 1rem;
+}
+
+.rodape ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: start;
+}
+
+.rodape a {
+  color: #555;
+  text-decoration: none;
+  list-style: none;
+  font-size: 1rem;
+}
+
+.rodape a:hover {
+  color: #4f9bff;
+}
+
+.copy {
+  text-align: center;
+  font-size: 14px;
+  padding: 10px;
+  border-top: 1px solid #9b9b9b;
+}
+
+.copy span {
+  cursor: pointer;
+  text-decoration: none;
+  list-style: none;
+}
+
+.copy span:hover {
+  color: #4f9bff;
+}
+
+.whatsapp-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+}
+
+.whatsapp-container a {
+    background-color: #25d366;
+    padding: 10px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.whatsapp-container img {
+    width: 45px;
+    height: 45px;
+}
+
+.whatsapp-container a:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.35);
+}
