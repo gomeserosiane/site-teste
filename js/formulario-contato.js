@@ -1,50 +1,75 @@
 
-// Envio de dados para WhatsApp com validação
-document.getElementById("whatsappForm").addEventListener("submit", function(e) {
-  e.preventDefault();
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('whatsappForm');
+    if (!form) return;
 
-  const nome = document.getElementById("nome");
-  const email = document.getElementById("email");
-  const whatsapp = document.getElementById("whatsapp");
-  const assunto = document.getElementById("assunto");
-  const botao = document.querySelector(".btn-enviar");
+    const nome = document.getElementById('nome');
+    const email = document.getElementById('email');
+    const whatsapp = document.getElementById('whatsapp');
+    const assunto = document.getElementById('assunto');
+    const botao = form.querySelector('.btn-enviar');
+    const numeroEmpresa = '5591999635260';
+    const botaoOriginal = botao.textContent;
 
-  let valido = true;
+    const onlyDigits = (value) => value.replace(/\D/g, '');
 
-  // Função auxiliar para verificar campos
-  [nome, email, whatsapp, assunto].forEach(campo => {
-    if (!campo.value.trim()) {
-      campo.classList.add("error");
-      valido = false;
-    } else {
-      campo.classList.remove("error");
-    }
-  });
+    const formatPhone = (value) => {
+        const digits = onlyDigits(value).slice(0, 11);
 
-  if (!valido) {
-    return; // impede envio se houver erro
-  }
+        if (digits.length <= 2) return digits; if (digits.length <= 7) return `(${digits.slice(0, 2)})
+            ${digits.slice(2)}`; if (digits.length <= 11) return `(${digits.slice(0, 2)}) ${digits.slice(2,
+            7)}-${digits.slice(7)}`; return value;
+    }; whatsapp.addEventListener('input', () => {
+        whatsapp.value = formatPhone(whatsapp.value);
+    });
 
-  // Mostra animação de carregamento
-  botao.classList.add("loading");
-  botao.textContent = "";
+    const validators = {
+        nome: (value) => value.trim().length >= 3,
+        email: (value) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value.trim()),
+        whatsapp: (value) => onlyDigits(value).length >= 10,
+        assunto: (value) => value.trim().length >= 8,
+    };
 
-  // Substitua pelo número real do WhatsApp (somente números, ex: 5581999999999)
-  const numeroEmpresa = "5591999635260";
+    const fields = [nome, email, whatsapp, assunto];
 
-  const mensagem = `*Formulário de Contato - Grupo Gomes & Rosiane*%0A
-    *Nome completo:* ${nome.value}%0A
-    *E-mail:* ${email.value}%0A
-    *WhatsApp:* ${whatsapp.value}%0A
-    *Assunto:* ${assunto.value}`;
+    const validateField = (field) => {
+        const isValid = validators[field.id](field.value);
+        field.classList.toggle('error', !isValid);
+        return isValid;
+    };
 
-  const link = `https://wa.me/${numeroEmpresa}?text=${mensagem}`;
+    fields.forEach((field) => {
+        field.addEventListener('input', () => validateField(field));
+        field.addEventListener('blur', () => validateField(field));
+    });
 
-  // Simula tempo de carregamento (melhor UX)
-  setTimeout(() => {
-    window.open(link, "_blank");
-    botao.classList.remove("loading");
-    botao.textContent = "Enviar pelo WhatsApp";
-    this.reset(); // limpa o formulário
-  }, 1000);
+    form.addEventListener('submit', (event) => {
+        event.preventDefault();
+
+        const isFormValid = fields.every((field) => validateField(field));
+        if (!isFormValid) return;
+
+        botao.classList.add('loading');
+        botao.setAttribute('aria-busy', 'true');
+
+        const mensagem = [
+            '*Formulário de Contato - Grupo Gomes & Rosiane*',
+            '',
+            `*Nome completo:* ${nome.value.trim()}`,
+            `*E-mail:* ${email.value.trim()}`,
+            `*WhatsApp:* ${whatsapp.value.trim()}`,
+            `*Assunto:* ${assunto.value.trim()}`,
+        ].join('\n');
+
+        const link = `https://wa.me/${numeroEmpresa}?text=${encodeURIComponent(mensagem)}`;
+
+        setTimeout(() => {
+            window.open(link, '_blank', 'noopener,noreferrer');
+            botao.classList.remove('loading');
+            botao.setAttribute('aria-busy', 'false');
+            botao.textContent = botaoOriginal;
+            form.reset();
+            fields.forEach((field) => field.classList.remove('error'));
+        }, 550);
+    });
 });

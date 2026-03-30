@@ -1,226 +1,140 @@
-
 .outros-servicos {
-  padding: 60px 20px;
-  text-align: center;
-  background: #FFF;
-  background: -webkit-linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(79, 155, 255, 1) 100%);
-  background: -moz-linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(79, 155, 255, 1) 100%);
-  background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(79, 155, 255, 1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#FFFFFF", endColorstr="#4F9BFF", GradientType=0);
-}
-
-.outros-servicos h2 {
-  font-size: 2rem;
-  color: #fff;
-  font-weight: bold;
+    padding: 96px 0 30px;
 }
 
 .card-servico {
-  max-width: 600px;
-  margin: 40px auto;
-  background: #ffffff;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-columns: minmax(320px, 0.9fr) minmax(0, 1.1fr);
+    gap: 0;
+    margin: 0 auto 32px;
+    overflow: hidden;
+    border-radius: var(--radius-lg);
+    background: rgba(255, 255, 255, 0.94);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-lg);
 }
 
-.card-servico img {
-  width: 100%;
-  border-radius: 10px;
-  margin-bottom: 20px;
+.card-servico>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-.card-servico h3 {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #000;
+.card-servico-copy {
+    padding: 34px;
 }
 
-.card-servico p {
-  font-size: 1.2rem;
-  font-style: italic;
+.card-servico-copy h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    line-height: 1.1;
+    margin-bottom: 12px;
+}
+
+.card-servico-copy p {
+    color: var(--text-soft);
 }
 
 .botoes-card {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 24px;
 }
 
-/* Ambos os botões com o mesmo tamanho */
-.btn-info-outros {
-  flex: 1;
-  /* Faz ambos ocuparem exatamente o mesmo espaço */
-  padding: 13.5px 0;
-  font-size: 16px;
-  font-weight: 600;
-  border-radius: 8px;
-  border: none;
-  cursor: pointer;
-  text-decoration: none;
-  color: #fff;
-
-  display: flex;
-  /* Garantir alinhamento interno */
-  justify-content: center;
-  /* Centraliza texto + ícone */
-  align-items: center;
-  gap: 10px;
-  /* Espaço entre texto e ícone */
+.botoes-card>* {
+    flex: 1 1 220px;
 }
 
-/* Botão PDF */
-.btn-info-outros {
-  background: #888;
+.beneficios-lista {
+    margin: 18px 0 22px;
+    padding-left: 20px;
+    color: var(--text-soft);
+    display: grid;
+    gap: 8px;
 }
 
-.btn-info-outros:hover {
-  background: #4f9bff;
-}
-
-/* Botão WhatsApp */
-.btn-whats-outros {
-  background: #25d366;
-  flex: 1;
-  padding: 14px 0;
-  font-size: 16px;
-  font-weight: 600;
-  border-radius: 8px;
-  border: none;
-  cursor: pointer;
-  text-decoration: none;
-  color: #fff;
-
-  display: flex;
-  /* ALINHAMENTO PERFEITO */
-  justify-content: center;
-  align-items: center;
-  /* <- CENTRALIZA VERTICALMENTE */
-  gap: 10px;
-
-  line-height: 1;
-  /* <- IMPEDIR DIFERENÇA ENTRE TEXTO E ÍCONE */
-}
-
-.btn-whats-outros:hover {
-  background: #1ebe5a;
-}
-
-/* Garantir que o ícone não tenha espaçamento próprio */
-.whatsapp-icon-outros img {
-  width: 25px;
-  height: 25px;
-  display: inline-block;
-  vertical-align: middle;
-  /* <- AJUDA NO ALINHAMENTO */
-  margin: 0;
-  /* Garantir zero margem */
-  padding: 0;
+.select-extra {
+    margin: 8px 0 24px;
+    width: 100%;
+    border-radius: 22px;
 }
 
 .video-container {
-  /* Define o contêiner do vídeo para posicionamento absoluto do iframe */
-  position: relative;
-  width: 100%;
-  /* Truque para manter a proporção 16:9 (9 / 16 * 100) */
-  padding-bottom: 56.25%;
-  height: 0;
-  overflow: hidden;
-  margin-top: 20px;
-  /* Espaçamento entre o parágrafo e o vídeo */
+    margin-top: 18px;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
 }
 
-.video-container iframe {
-  /* O iframe cobre o contêiner inteiro */
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
-  border-radius: 8px;
-  /* Opcional: bordas arredondadas no vídeo */
+.video-container video {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #0f172a;
 }
 
-/***** SLIDER OUTROS SERVIÇOS *****/
+.full-width {
+    width: 100%;
+    margin-top: 24px;
+}
+
 .slider-modal-outros {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  justify-content: center;
-  align-items: center;
-  z-index: 5000;
+    position: fixed;
+    inset: 0;
+    z-index: 1820;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: rgba(2, 6, 23, 0.78);
+    backdrop-filter: blur(8px);
+}
+
+.slider-modal-outros.is-open {
+    display: flex;
 }
 
 .slider-content-outros {
-  position: relative;
-  max-width: 80%;
-  max-height: 80%;
-  background: rgba(0, 0, 0, 0.2);
-  border: 2px solid #000;
-  border-radius: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
-
-.close-btn-outros {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  top: 80px;
-  right: 160px;
-
-  background: rgba(255, 0, 0, 0.808);
-  color: white;
-  border: 2px solid #000;
-  border-radius: 50%;
-
-  width: 50px;
-  height: 50px;
-  font-size: 40px;
-  font-weight: bold;
-
-  cursor: pointer;
-  z-index: 10;
+    width: min(88vw, 980px);
+    max-height: 80vh;
+    padding: 14px;
+    border-radius: 28px;
+    background: rgba(15, 23, 42, 0.86);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: var(--shadow-lg);
 }
 
 .slider-images-outros img {
-  max-width: 100%;
-  max-height: 80vh;
-  display: block;
+    width: 100%;
+    max-height: 72vh;
+    object-fit: contain;
+    border-radius: 18px;
 }
 
-/* Setas fora do modal */
-.arrow {
-  background: rgba(0, 0, 0, 0.2);
-  border-radius: 50px;
-  color: white;
-  border: 2px solid #000;
-  padding: 15px;
-  cursor: pointer;
-  position: fixed;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 40px;
-  z-index: 1001;
+.close-btn-outros {
+    position: absolute;
+    top: 28px;
+    right: 28px;
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(239, 68, 68, 0.95);
+    color: var(--white);
+    font-size: 2rem;
+    box-shadow: var(--shadow-md);
 }
 
-.arrow:hover {
-  background-color: #4f9bff;
+.left-arrow-outros,
+.right-arrow-outros {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .left-arrow-outros {
-  left: 160px;
+    left: max(18px, calc(50vw - 560px));
 }
 
 .right-arrow-outros {
-  right: 160px;
+    right: max(18px, calc(50vw - 560px));
 }

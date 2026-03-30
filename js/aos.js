@@ -1,19 +1,22 @@
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener('DOMContentLoaded', () => {
+    if (typeof AOS === 'undefined') return;
 
-    // Se a tela for desktop, inicializa o AOS
-    if (window.innerWidth >= 1024) {
+    const isDesktop = window.innerWidth >= 992;
+
+    if (isDesktop) {
         AOS.init({
-            duration: 800,
-            easing: "ease-out",
-            once: true
+            duration: 750,
+            easing: 'ease-out-cubic',
+            once: true,
+            offset: 40,
         });
-    } else {
-        // Remove todos os atributos AOS no mobile
-        document.querySelectorAll('[data-aos]').forEach(el => {
-            el.removeAttribute('data-aos');
-            el.removeAttribute('data-aos-delay');
-            el.removeAttribute('data-aos-duration');
-        });
+        return;
     }
+
+    document.querySelectorAll('[data-aos]').forEach((element) => {
+        element.removeAttribute('data-aos');
+        element.removeAttribute('data-aos-delay');
+        element.removeAttribute('data-aos-duration');
+    });
 });

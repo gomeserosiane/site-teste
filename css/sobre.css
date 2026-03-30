@@ -1,39 +1,65 @@
-.sobre, .servicos {
-  padding: 60px 20px;
-  text-align: center;
+.sobre {
+    padding: 96px 0 40px;
 }
 
-/****** SEÇÃO SOBRE ******/
-.sobre h2, .servicos h2 {
-  font-size: 2rem;
-  font-weight: bold;
-}
-
-/* Só o primeiro parágrafo recebe padding */
 .sobre-conteudo {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+    gap: 32px;
+    align-items: stretch;
+}
+
+.sobre-card,
+.sobre-visual {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    backdrop-filter: blur(12px);
+}
+
+.sobre-card {
+    padding: 34px;
+}
+
+.sobre-card p {
+    color: var(--text-soft);
+    font-size: 1.05rem;
+}
+
+.sobre-card p+p {
+    margin-top: 16px;
+}
+
+.sobre-pillars {
+    margin-top: 24px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.sobre-pillars span {
+    padding: 10px 16px;
+    border-radius: 999px;
+    background: rgba(59, 130, 246, 0.08);
+    border: 1px solid rgba(59, 130, 246, 0.12);
+    color: var(--primary-dark);
+    font-weight: 700;
+    font-size: 0.92rem;
+}
+
+.sobre-visual {
+    display: flex;
     align-items: center;
-    gap: 20px;
-    padding: 0 80px;
-    width: 100%;
-    box-sizing: border-box;
+    justify-content: center;
+    min-height: 100%;
+    padding: 30px;
+    background:
+        radial-gradient(circle at top, rgba(59, 130, 246, 0.12), transparent 42%),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.96) 0%, rgba(219, 234, 254, 0.75) 100%);
 }
 
-.sobre-conteudo p {
-    flex: 1;              /* Ocupa todo o espaço disponível */
-    min-width: 0;         /* Impede expansão infinita que empurra a imagem */
-    text-align: start;
-    padding: 0;
-    font-size: 1.2rem;
-}
-
-.sobre-conteudo img {
-    width: 320px;
-    max-width: 100%;
-    text-align: center;
-    height: auto;
-    flex-shrink: 0;       /* Impede a imagem de ser empurrada */
-    display: block;
+.sobre-visual img {
+    width: min(100%, 360px);
+    object-fit: contain;
 }

@@ -1,100 +1,78 @@
-const slider = document.querySelector(".cards-container");
-const btnLeft = document.querySelector(".left-btn");
-const btnRight = document.querySelector(".right-btn");
 
-function updateArrows() {
-    const maxScroll = slider.scrollWidth - slider.clientWidth;
+document.addEventListener('DOMContentLoaded', () => {
+    const slider = document.querySelector('.cards-container');
+    const btnLeft = document.querySelector('.left-btn');
+    const btnRight = document.querySelector('.right-btn');
 
-    if (slider.scrollLeft <= 10) {
-        btnLeft.style.opacity = "0";
-        btnLeft.style.pointerEvents = "none";
-    } else {
-        btnLeft.style.opacity = "1";
-        btnLeft.style.pointerEvents = "auto";
-    }
+    if (!slider || !btnLeft || !btnRight) return;
 
-    if (slider.scrollLeft >= maxScroll - 10) {
-        btnRight.style.opacity = "0";
-        btnRight.style.pointerEvents = "none";
-    } else {
-        btnRight.style.opacity = "1";
-        btnRight.style.pointerEvents = "auto";
-    }
-}
+    const updateArrows = () => {
+        const maxScroll = slider.scrollWidth - slider.clientWidth;
+        const hideLeft = slider.scrollLeft <= 8; const hideRight = slider.scrollLeft >= maxScroll - 8;
 
-/* --- CONTROLES DAS SETAS DE NAVEGAÇÃO --- */
-function moveRight() {
-    slider.scrollLeft += slider.clientWidth * 0.9;
-    setTimeout(updateArrows, 200);
-}
+        btnLeft.style.opacity = hideLeft ? '0' : '1';
+        btnLeft.style.pointerEvents = hideLeft ? 'none' : 'auto';
+        btnRight.style.opacity = hideRight ? '0' : '1';
+        btnRight.style.pointerEvents = hideRight ? 'none' : 'auto';
+    };
 
-function moveLeft() {
-    slider.scrollLeft -= slider.clientWidth * 0.9;
-    setTimeout(updateArrows, 200);
-}
+    const moveRight = () => {
+        slider.scrollBy({ left: slider.clientWidth * 0.92, behavior: 'smooth' });
+    };
 
-btnRight.addEventListener("click", moveRight);
-btnLeft.addEventListener("click", moveLeft);
+    const moveLeft = () => {
+        slider.scrollBy({ left: -slider.clientWidth * 0.92, behavior: 'smooth' });
+    };
 
-/* --- ARRASTAR (DESKTOP) --- */
-let isDown = false;
-let startX;
-let scrollStart;
+    btnRight.addEventListener('click', moveRight);
+    btnLeft.addEventListener('click', moveLeft);
 
-slider.addEventListener("mousedown", (e) => {
-    isDown = true;
-    startX = e.pageX - slider.offsetLeft;
-    scrollStart = slider.scrollLeft;
+    let isDown = false;
+    let startX = 0;
+    let scrollStart = 0;
+
+    slider.addEventListener('mousedown', (event) => {
+        isDown = true;
+        startX = event.pageX - slider.offsetLeft;
+        scrollStart = slider.scrollLeft;
+        slider.classList.add('is-dragging');
+    });
+
+    slider.addEventListener('mouseleave', () => {
+        isDown = false;
+        slider.classList.remove('is-dragging');
+    });
+
+    slider.addEventListener('mouseup', () => {
+        isDown = false;
+        slider.classList.remove('is-dragging');
+        updateArrows();
+    });
+
+    slider.addEventListener('mousemove', (event) => {
+        if (!isDown) return;
+        event.preventDefault();
+        const x = event.pageX - slider.offsetLeft;
+        const walk = (x - startX) * 1.2;
+        slider.scrollLeft = scrollStart - walk;
+    });
+
+    let touchStartX = 0;
+
+    slider.addEventListener('touchstart', (event) => {
+        touchStartX = event.touches[0].pageX;
+        scrollStart = slider.scrollLeft;
+    }, { passive: true });
+
+    slider.addEventListener('touchmove', (event) => {
+        const currentX = event.touches[0].pageX;
+        const walk = (currentX - touchStartX) * 1.1;
+        slider.scrollLeft = scrollStart - walk;
+    }, { passive: true });
+
+    document.addEventListener('keydown', (event) => {
+        if (window.innerWidth < 992) return; if (event.key === 'ArrowRight') moveRight(); if (event.key === 'ArrowLeft')
+            moveLeft();
+    }); slider.addEventListener('scroll', updateArrows); window.addEventListener('resize',
+        updateArrows); updateArrows();
 });
-
-slider.addEventListener("mouseup", () => {
-    isDown = false;
-    updateArrows();
-});
-
-slider.addEventListener("mousemove", (e) => {
-    if (!isDown) return;
-    e.preventDefault();
-    const x = e.pageX - slider.offsetLeft;
-    const walk = (x - startX) * 2;
-    slider.scrollLeft = scrollStart - walk;
-});
-
-/* --- DESLIZAR (MOBILE) --- */
-slider.addEventListener("touchstart", (e) => {
-    isDown = true;
-    startX = e.touches[0].pageX - slider.offsetLeft;
-    scrollStart = slider.scrollLeft;
-});
-
-slider.addEventListener("touchend", () => {
-    isDown = false;
-    updateArrows();
-});
-
-slider.addEventListener("touchmove", (e) => {
-    if (!isDown) return;
-    const x = e.touches[0].pageX - slider.offsetLeft;
-    const walk = (x - startX) * 2;
-    slider.scrollLeft = scrollStart - walk;
-});
-
-/* --- CONTROLE PELO TECLADO (DESKTOP) --- */
-document.addEventListener("keydown", (e) => {
-    // Ignora se estiver no mobile
-    if (window.innerWidth < 768) return;
-
-    if (e.key === "ArrowRight") {
-        moveRight();
-    }
-
-    if (e.key === "ArrowLeft") {
-        moveLeft();
-    }
-});
-
-/* Atualiza as setas ao iniciar */
-updateArrows();
-
-/* Atualiza também durante o scroll */
-slider.addEventListener("scroll", updateArrows);

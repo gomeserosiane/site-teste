@@ -1,143 +1,117 @@
-// Array com imagens de cada card
-const cardImages = [
-  ["images-slider/slider-consultasmedicas1.png", "images-slider/slider-consultasmedicas2.png",
-    "images-slider/slider-consultasmedicas3.png", "images-slider/slider-consultasmedicas4.png"], // Card 0 (Consultas médicas)
 
-  ["images-slider/slider-planofunerario1.png", "images-slider/slider-planofunerario2.png",
-    "images-slider/slider-planofunerario3.png", "images-slider/slider-planofunerario4.png"], // Card 1 (Funerária)
+document.addEventListener('DOMContentLoaded', () => {
+    const cardImages = [
+        ['images-slider/slider-consultas.png', 'images-slider/slider-consultas1.png',
+            'images-slider/slider-consultas2.png', 'images-slider/slider-consultas3.png'],
+        ['images-slider/slider-funeraria.png'],
+        ['images-slider/slider-seguros.png', 'images-slider/slider-seguros1.png', 'images-slider/slider-seguros2.png'],
+        ['images-slider/slider-mobilidade-urbana.png'],
+        ['images-slider/slider-certificados.png'],
+        ['images-slider/slider-imoveis.png'],
+        ['images-slider/slider-planos.png', 'images-slider/slider-planos1.png'],
+        ['images-slider/slider-otica.png'],
+        ['images-slider/slider-contabilidade.png'],
+        ['images-slider/slider-documentos.png'],
+    ];
 
-  ["images-slider/slider-seguros1.png", "images-slider/slider-seguros2.png",
-    "images-slider/slider-seguros3.png", "images-slider/slider-seguros4.png"], // Card 2 (Seguros)
+    const modal = document.getElementById('sliderModal');
+    if (!modal) return;
 
-  ["images-slider/slider-certificados.png"], // Card 3 (Certificados)
+    const sliderImagesContainer = modal.querySelector('.slider-images');
+    const leftArrow = modal.querySelector('.left-arrow');
+    const rightArrow = modal.querySelector('.right-arrow');
+    const closeBtn = modal.querySelector('.close-btn');
+    const triggers = document.querySelectorAll('.btn-info[data-card]');
 
-  ["images-slider/slider-servicosdemobildade.png"], // Card 4 (Serviços de mobilidade)
+    let currentCardIndex = 0;
+    let currentImageIndex = 0;
+    let touchStartX = 0;
+    let touchEndX = 0;
 
-  ["images-slider/slider-imoveis.png"], // Card 5 (Imóveis)
+    const lockScroll = () => {
+        document.body.classList.add('no-scroll');
+    };
 
-  ["images-slider/slider-planodesaude.png", "images-slider/slider-planoodonto.png"], // Card 6 (Planos de saude e odonto)
+    const unlockScroll = () => {
+        document.body.classList.remove('no-scroll');
+    };
 
-  ["images-slider/slider-otica.png"], // Card 7 (Ótica)
+    const renderImage = () => {
+        sliderImagesContainer.innerHTML = '';
+        const images = cardImages[currentCardIndex] || [];
+        if (!images.length) return;
 
-  ["images-slider/slider-contabilidade.png"], // Card 8 (Contabilidade)
+        const img = document.createElement('img');
+        img.src = images[currentImageIndex];
+        img.alt = `Galeria do serviço ${currentCardIndex + 1} - imagem ${currentImageIndex + 1}`;
+        sliderImagesContainer.appendChild(img);
 
-  ["images-slider/slider-documentos.png"] // Card 9 (Documentação)
-];
+        const shouldShowArrows = images.length > 1 && window.innerWidth > 768;
+        leftArrow.style.display = shouldShowArrows ? 'flex' : 'none';
+        rightArrow.style.display = shouldShowArrows ? 'flex' : 'none';
+    };
 
-/***********************
- * ELEMENTOS DO DOM
- ***********************/
-const modal = document.getElementById("sliderModal");
-const sliderImagesContainer = modal.querySelector(".slider-images");
-const leftArrow = modal.querySelector(".left-arrow");
-const rightArrow = modal.querySelector(".right-arrow");
-const closeBtn = modal.querySelector(".close-btn");
+    const openModal = (cardIndex) => {
+        currentCardIndex = cardIndex;
+        currentImageIndex = 0;
+        renderImage();
+        modal.classList.add('is-open');
+        modal.setAttribute('aria-hidden', 'false');
+        lockScroll();
+    };
 
-/***********************
- * ESTADO DO SLIDER
- ***********************/
-let currentCardIndex = 0;
-let currentImageIndex = 0;
+    const closeModal = () => {
+        modal.classList.remove('is-open');
+        modal.setAttribute('aria-hidden', 'true');
+        sliderImagesContainer.innerHTML = '';
+        unlockScroll();
+    };
 
-/***********************
- * ABRIR MODAL
- ***********************/
-document.querySelectorAll(".btn-info").forEach(btn => {
-  btn.addEventListener("click", () => {
-    currentCardIndex = parseInt(btn.dataset.card, 10);
-    currentImageIndex = 0;
+    const showPrevious = () => {
+        const images = cardImages[currentCardIndex] || [];
+        if (images.length <= 1) return; currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+        renderImage();
+    }; const showNext = () => {
+        const images = cardImages[currentCardIndex] || [];
+        if (images.length <= 1) return; currentImageIndex = (currentImageIndex + 1) % images.length; renderImage();
+    };
+    triggers.forEach((button) => {
+        button.addEventListener('click', () => {
+            const cardIndex = Number(button.dataset.card);
+            openModal(cardIndex);
+        });
+    });
 
-    renderImage();
-    modal.style.display = "flex";
+    leftArrow.addEventListener('click', showPrevious);
+    rightArrow.addEventListener('click', showNext);
+    closeBtn.addEventListener('click', closeModal);
 
-    // Trava scroll SEM quebrar sticky
-    document.body.style.overflow = "hidden";
-    document.documentElement.style.overflow = "hidden";
-  });
-});
+    modal.addEventListener('click', (event) => {
+        if (event.target === modal) closeModal();
+    });
 
-/***********************
- * FECHAR MODAL
- ***********************/
-function closeModal() {
-  modal.style.display = "none";
-  sliderImagesContainer.innerHTML = "";
+    sliderImagesContainer.addEventListener('touchstart', (event) => {
+        touchStartX = event.changedTouches[0].screenX;
+    }, { passive: true });
 
-  // Restaura scroll corretamente (ESSENCIAL)
-  document.body.style.overflow = "";
-  document.documentElement.style.overflow = "";
-}
+    sliderImagesContainer.addEventListener('touchmove', (event) => {
+        touchEndX = event.changedTouches[0].screenX;
+    }, { passive: true });
 
-closeBtn.addEventListener("click", closeModal);
+    sliderImagesContainer.addEventListener('touchend', () => {
+        const threshold = 50;
+        if (touchEndX + threshold < touchStartX) showNext(); if (touchEndX > touchStartX + threshold)
+            showPrevious();
+    });
 
-// Fecha ao clicar no fundo escuro
-modal.addEventListener("click", e => {
-  if (e.target === modal) closeModal();
-});
+    document.addEventListener('keydown', (event) => {
+        if (!modal.classList.contains('is-open')) return;
+        if (event.key === 'Escape') closeModal();
+        if (event.key === 'ArrowLeft') showPrevious();
+        if (event.key === 'ArrowRight') showNext();
+    });
 
-/***********************
- * RENDERIZA IMAGEM
- ***********************/
-function renderImage() {
-  sliderImagesContainer.innerHTML = "";
-
-  const images = cardImages[currentCardIndex];
-  const img = document.createElement("img");
-  img.src = images[currentImageIndex];
-  sliderImagesContainer.appendChild(img);
-
-  // Controle das setas
-  if (images.length <= 1) {
-    leftArrow.style.display = "none";
-    rightArrow.style.display = "none";
-  } else {
-    leftArrow.style.display = "block";
-    rightArrow.style.display = "block";
-  }
-}
-
-/***********************
- * NAVEGAÇÃO POR SETAS
- ***********************/
-leftArrow.addEventListener("click", () => {
-  const images = cardImages[currentCardIndex];
-  currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
-  renderImage();
-});
-
-rightArrow.addEventListener("click", () => {
-  const images = cardImages[currentCardIndex];
-  currentImageIndex = (currentImageIndex + 1) % images.length;
-  renderImage();
-});
-
-/***********************
- * SWIPE MOBILE (UMA VEZ)
- ***********************/
-let touchStartX = 0;
-let touchEndX = 0;
-
-sliderImagesContainer.addEventListener("touchstart", e => {
-  touchStartX = e.changedTouches[0].screenX;
-});
-
-sliderImagesContainer.addEventListener("touchmove", e => {
-  touchEndX = e.changedTouches[0].screenX;
-});
-
-sliderImagesContainer.addEventListener("touchend", () => {
-  const images = cardImages[currentCardIndex];
-  if (images.length <= 1) return;
-
-  const swipeThreshold = 50;
-
-  if (touchEndX + swipeThreshold < touchStartX) {
-    currentImageIndex = (currentImageIndex + 1) % images.length;
-    renderImage();
-  }
-
-  if (touchEndX > touchStartX + swipeThreshold) {
-    currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
-    renderImage();
-  }
+    window.addEventListener('resize', () => {
+        if (modal.classList.contains('is-open')) renderImage();
+    });
 });

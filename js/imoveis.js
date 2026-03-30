@@ -1,162 +1,166 @@
+
 document.addEventListener('DOMContentLoaded', () => {
+    const modal = document.querySelector('.imovel-modal');
+    if (!modal) return;
 
-  const modal = document.querySelector('.imovel-modal');
-  const sliderImg = document.getElementById('sliderImage');
-  const leftArrow = document.querySelector('.slider-arrow.left');
-  const rightArrow = document.querySelector('.slider-arrow.right');
+    const sliderImg = document.getElementById('sliderImage');
+    const leftArrow = modal.querySelector('.slider-arrow.left');
+    const rightArrow = modal.querySelector('.slider-arrow.right');
+    const subtituloEl = document.getElementById('imovelSubtitulo');
+    const desc1 = document.getElementById('imovelDescricao1');
+    const desc2 = document.getElementById('imovelDescricao2');
+    const desc3 = document.getElementById('imovelDescricao3');
+    const closeBtn = modal.querySelector('.close-btn-imovel');
+    const items = document.querySelectorAll('.imovel-item');
+    const imovelButtons = modal.querySelector('.imovel-buttons');
+    const indisponivelBtn = modal.querySelector('.btn-indisponivel-modal');
 
-  const subtituloEl = document.getElementById('imovelSubtitulo');
-  const desc1 = document.getElementById('imovelDescricao1');
-  const desc2 = document.getElementById('imovelDescricao2');
-  const desc3 = document.getElementById('imovelDescricao3');
+    const imoveis = {
+        0: {
+            subtitulo: 'Apartamento para alugar - Marambaia',
+            descricoes: [
+                'Com 1 quarto, sala, banheiro e 38 m² de área, este apartamento é ideal para quem busca praticidade e conforto.',
+                'A região conta com infraestrutura estratégica, próxima a feiras, supermercados e farmácias, facilitando a rotina.',
+                'Os acabamentos valorizam um ambiente moderno, funcional e bem iluminado.',
+            ],
+            imagens: [
+                'images-imoveis/casa-marambaia-img1.png',
+                'images-imoveis/casa-marambaia-img2.png',
+                'images-imoveis/casa-marambaia-img3.png',
+                'images-imoveis/casa-marambaia-img4.png',
+                'images-imoveis/casa-marambaia-img5.png',
+                'images-imoveis/casa-marambaia-img6.png',
+            ],
+            indisponivel: false,
+        },
+        1: {
+            subtitulo: 'Casa para vender - Souza',
+            descricoes: [
+                'Boa localização, próxima a escolas, supermercados, farmácias e com fácil acesso ao transporte público.',
+                'Conta com 2 quartos espaçosos, sala aconchegante, cozinha ampla em conceito aberto e banheiro arejado.',
+                'Uma excelente oportunidade para quem quer morar bem ou investir em uma nova etapa com mais conforto.',
+            ],
+            imagens: ['images-imoveis/casa-souza-img1.png'],
+            indisponivel: false,
+        },
+        2: {
+            subtitulo: 'Ponto comercial - Pedreira',
+            descricoes: [
+                'Localizado em uma região movimentada, com área de 24,5 m² e 1 banheiro, pronto para atender diferentes perfis de negócio.',
+                'A fachada favorece visibilidade comercial e ajuda a potencializar fluxo e presença local.',
+                'No momento, este imóvel está indisponível para locação.',
+            ],
+            imagens: [
+                'images-imoveis/ponto-comercial-pedreira-img1.png',
+                'images-imoveis/ponto-comercial-pedreira-img2.png',
+                'images-imoveis/ponto-comercial-pedreira-img3.png',
+            ],
+            indisponivel: true,
+        },
+        3: {
+            subtitulo: 'Casa para alugar - Marambaia',
+            descricoes: [
+                'Localizada na Passagem Santa Marta, nº 7, Casa A, no bairro da Marambaia, em Belém.',
+                'Endereço em frente ao supermercado Cidade da Marambaia, agregando conveniência ao dia a dia.',
+                'Imóvel com 2 andares, 3 quartos sendo 1 suíte, 2 banheiros, sala de estar, cozinha e lavabo.',
+            ],
+            imagens: [
+                'images-imoveis/casa marambaia pass sta marta.jpeg',
+                'images-imoveis/casa marambaia pass sta marta2.jpeg',
+                'images-imoveis/casa marambaia pass sta marta3.jpeg',
+                'images-imoveis/casa marambaia pass sta marta4.jpeg',
+                'images-imoveis/casa marambaia pass sta marta5.jpeg',
+                'images-imoveis/casa marambaia pass sta marta6.jpeg',
+                'images-imoveis/casa marambaia pass sta marta7.jpeg',
+                'images-imoveis/casa marambaia pass sta marta8.jpeg',
+                'images-imoveis/casa marambaia pass sta marta9.jpeg',
+                'images-imoveis/casa marambaia pass sta marta10.jpeg',
+                'images-imoveis/casa marambaia pass sta marta11.jpeg',
+                'images-imoveis/casa marambaia pass sta marta12.jpeg',
+                'images-imoveis/casa marambaia pass sta marta13.jpeg',
+                'images-imoveis/casa marambaia pass sta marta14.jpeg',
+                'images-imoveis/casa marambaia pass sta marta15.jpeg',
+                'images-imoveis/casa marambaia pass sta marta16.jpeg',
+            ],
+            indisponivel: false,
+        },
+    };
 
-  const closeBtn = document.querySelector('.close-btn-imovel');
-  const items = document.querySelectorAll('.imovel-item');
+    let imagensAtuais = [];
+    let index = 0;
 
-  const imovelButtons = document.querySelector('.imovel-buttons');
-  const indisponivelBtn = document.querySelector('.btn-indisponivel-modal');
+    const updateArrows = () => {
+        leftArrow.style.display = index === 0 ? 'none' : 'flex';
+        rightArrow.style.display = index === imagensAtuais.length - 1 ? 'none' : 'flex';
+    };
 
-  /* ===== DADOS DOS IMÓVEIS ===== */
-  const imoveis = {
-    0: {
-      subtitulo: 'Ap. para Alugar – Marambaia',
-      descricoes: [
-        'Com 01 quarto, 01 sala, 01 banheiro e 38,00 m2 de área, este apartamento é ideal para quem busca praticidade e conforto. Além disso, está situado em uma região com uma ótima infraestrutura, próxima a feiras, supermercados e farmácias, facilitando o seu dia a dia.',
-        'O imóvel conta com acabamentos de qualidade, proporcionando um ambiente moderno e agradável. A sala é espaçosa e bem iluminada, perfeita para receber amigos e familiares. O quarto é aconchegante e tranquilo, garantindo boas noites de sono.'
-      ],
-      imagens: [
-        'images-imoveis/casa-marambaia-img1.png',
-        'images-imoveis/casa-marambaia-img2.png',
-        'images-imoveis/casa-marambaia-img3.png',
-        'images-imoveis/casa-marambaia-img4.png',
-        'images-imoveis/casa-marambaia-img5.png',
-        'images-imoveis/casa-marambaia-img6.png'
-      ]
-    },
-    1: {
-      subtitulo: 'Casa para Vender – Souza',
-      descricoes: [
-        'Com uma boa localização, próxima a escolas, supermercados, farmácias e com fácil acesso a transporte público, essa casa é ideal para quem deseja viver em um lugar tranquilo e com toda a infraestrutura necessária para o dia a dia.',
-        'O imóvel conta com 2 quartos espaçosos, uma sala aconchegante, cozinha ampla em conceito aberto, banheiro moderno arejada. Além disso, sala de estar ,garagem e doi banheiros na area do térreo e Não perca a oportunidade de adquirir essa casa incrível e transformar seus sonhos em realidade. Agende uma visita e venha conhecer pessoalmente cada detalhe desse imóvel encantador.'
-      ],
-      imagens: ['images-imoveis/casa-souza-img1.png']
-    },
-    2: {
-      subtitulo: 'Ponto Comercial – Pedreira',
-      descricoes: [
-        'Localizado em uma das regiões mais movimentadas da cidade, este imóvel possui área de 24,5 m com espaço amplo e 1 banheiro, perfeito para atender às necessidades de seu negócio. Com uma fachada , o espaço que oferece grande visibilidade para atrair clientes e alavancar suas vendas.'
-      ],
-      imagens: [
-        'images-imoveis/ponto-comercial-pedreira-img1.png',
-        'images-imoveis/ponto-comercial-pedreira-img2.png',
-        'images-imoveis/ponto-comercial-pedreira-img3.png'
-      ]
-    },
-    3: {
-      subtitulo: 'Ap. para Alugar – Marambaia',
-      descricoes: [
-        'Com 01 quarto, 01 sala, 01 banheiro e 38,00 m2 de área, este apartamento é ideal para quem busca praticidade e conforto. Além disso, está situado em uma região com uma ótima infraestrutura, próxima a feiras, supermercados e farmácias, facilitando o seu dia a dia.',
-        'O imóvel conta com acabamentos de qualidade, proporcionando um ambiente moderno e agradável. A sala é espaçosa e bem iluminada, perfeita para receber amigos e familiares. O quarto é aconchegante e tranquilo, garantindo boas noites de sono.'
-      ],
-      imagens: [
-        'images-imoveis/casa-marambaia-img1.png',
-        'images-imoveis/casa-marambaia-img2.png',
-        'images-imoveis/casa-marambaia-img3.png',
-        'images-imoveis/casa-marambaia-img4.png',
-        'images-imoveis/casa-marambaia-img5.png',
-        'images-imoveis/casa-marambaia-img6.png'
-      ]
-    },
-    4: {
-      subtitulo: 'Casa para Vender – Souza',
-      descricoes: [
-        'Com uma boa localização, próxima a escolas, supermercados, farmácias e com fácil acesso a transporte público, essa casa é ideal para quem deseja viver em um lugar tranquilo e com toda a infraestrutura necessária para o dia a dia.',
-        'O imóvel conta com 2 quartos espaçosos, uma sala aconchegante, cozinha ampla em conceito aberto, banheiro moderno arejada. Além disso, sala de estar ,garagem e doi banheiros na area do térreo e Não perca a oportunidade de adquirir essa casa incrível e transformar seus sonhos em realidade. Agende uma visita e venha conhecer pessoalmente cada detalhe desse imóvel encantador.'
-      ],
-      imagens: ['images-imoveis/casa-souza-img1.png']
-    },
-    5: {
-      subtitulo: 'Ponto Comercial – Pedreira',
-      descricoes: [
-        'Localizado em uma das regiões mais movimentadas da cidade, este imóvel possui área de 24,5 m com espaço amplo e 1 banheiro, perfeito para atender às necessidades de seu negócio. Com uma fachada , o espaço que oferece grande visibilidade para atrair clientes e alavancar suas vendas.'
-      ],
-      imagens: [
-        'images-imoveis/ponto-comercial-pedreira-img1.png',
-        'images-imoveis/ponto-comercial-pedreira-img2.png',
-        'images-imoveis/ponto-comercial-pedreira-img3.png'
-      ]
-    }
-  };
+    const renderCurrentImage = () => {
+        sliderImg.src = imagensAtuais[index];
+        sliderImg.alt = `Imagem do imóvel ${index + 1}`;
+        updateArrows();
+    };
 
-  let imagensAtuais = [];
-  let index = 0;
+    const openModal = (id) => {
+        const imovel = imoveis[id];
+        if (!imovel) return;
 
-  /* ===== ABRIR MODAL ===== */
-  items.forEach(item => {
-    item.addEventListener('click', () => {
-      const id = item.dataset.imovel;
-      const imovel = imoveis[id];
-      if (!imovel) return;
+        imagensAtuais = imovel.imagens;
+        index = 0;
 
-      /* MOSTRAR / ESCONDER BOTÕES */
-      if (id == 2 || id == 5) {
-        imovelButtons.style.display = 'none';
-        indisponivelBtn.style.display = 'block';
-      } else {
-        imovelButtons.style.display = 'flex';
-        indisponivelBtn.style.display = 'none';
-      }
+        subtituloEl.textContent = imovel.subtitulo;
+        desc1.textContent = imovel.descricoes[0] || '';
+        desc2.textContent = imovel.descricoes[1] || '';
+        desc3.textContent = imovel.descricoes[2] || '';
 
-      imagensAtuais = imovel.imagens;
-      index = 0;
+        if (imovel.indisponivel) {
+            imovelButtons.style.display = 'none';
+            indisponivelBtn.style.display = 'inline-flex';
+        } else {
+            imovelButtons.style.display = 'flex';
+            indisponivelBtn.style.display = 'none';
+        }
 
-      sliderImg.src = imagensAtuais[0];
-      subtituloEl.textContent = imovel.subtitulo;
+        renderCurrentImage();
+        modal.classList.add('active');
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('no-scroll');
+    };
 
-      desc1.textContent = imovel.descricoes[0] || '';
-      desc2.textContent = imovel.descricoes[1] || '';
-      desc3.textContent = imovel.descricoes[2] || '';
+    const closeModal = () => {
+        modal.classList.remove('active');
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('no-scroll');
+    };
 
-      modal.classList.add('active');
-      document.body.style.overflow = 'hidden';
-      updateArrows();
+    items.forEach((item) => {
+        item.addEventListener('click', () => {
+            openModal(item.dataset.imovel);
+        });
     });
-  });
 
-  /* ===== SETAS ===== */
-  function updateArrows() {
-    leftArrow.style.display = index === 0 ? 'none' : 'block';
-    rightArrow.style.display = index === imagensAtuais.length - 1 ? 'none' : 'block';
-  }
+    leftArrow.addEventListener('click', (event) => {
+        event.stopPropagation();
+        if (index <= 0) return; index -= 1; renderCurrentImage();
+    }); rightArrow.addEventListener('click', (event) => {
+        event.stopPropagation();
+        if (index >= imagensAtuais.length - 1) return;
+        index += 1;
+        renderCurrentImage();
+    });
 
-  leftArrow.addEventListener('click', (e) => {
-    e.stopPropagation();
-    if (index > 0) {
-      index--;
-      sliderImg.src = imagensAtuais[index];
-      updateArrows();
-    }
-  });
+    closeBtn.addEventListener('click', closeModal);
 
-  rightArrow.addEventListener('click', (e) => {
-    e.stopPropagation();
-    if (index < imagensAtuais.length - 1) {
-      index++;
-      sliderImg.src = imagensAtuais[index];
-      updateArrows();
-    }
-  });
+    modal.addEventListener('click', (event) => {
+        if (event.target === modal) closeModal();
+    });
 
-  /* ===== FECHAR ===== */
-  function closeModal() {
-    modal.classList.remove('active');
-    document.body.style.overflow = '';
-  }
-
-  closeBtn.addEventListener('click', closeModal);
-
-  modal.addEventListener('click', (e) => {
-    if (e.target === modal) closeModal();
-  });
-
+    document.addEventListener('keydown', (event) => {
+        if (!modal.classList.contains('active')) return;
+        if (event.key === 'Escape') closeModal();
+        if (event.key === 'ArrowLeft' && index > 0) {
+            index -= 1;
+            renderCurrentImage();
+        }
+        if (event.key === 'ArrowRight' && index < imagensAtuais.length - 1) { index += 1; renderCurrentImage(); }
+    });
 });
