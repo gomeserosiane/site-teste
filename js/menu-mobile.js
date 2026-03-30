@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', () => {
     const toggle = document.getElementById('menu-toggle');
     const mobileMenu = document.getElementById('mobile-menu');
@@ -9,6 +8,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!toggle || !mobileMenu || !closeMenu || !backdrop) return;
 
     const openMenu = () => {
+        if (window.innerWidth > 768) return;
+
         mobileMenu.classList.add('is-open');
         backdrop.classList.add('is-visible');
         toggle.setAttribute('aria-expanded', 'true');
@@ -32,6 +33,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.addEventListener('keydown', (event) => {
         if (event.key === 'Escape' && mobileMenu.classList.contains('is-open')) {
+            closeMobileMenu();
+        }
+    });
+
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 768) {
             closeMobileMenu();
         }
     });

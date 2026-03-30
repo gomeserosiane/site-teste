@@ -1,180 +1,258 @@
-
 @media (max-width: 1100px) {
-.desktop-menu,
-.header-cta {
-display: none;
-}
 
-.menu-toggle {
-display: inline-flex;
-align-items: center;
-justify-content: center;
-}
+    .desktop-menu,
+    .header-cta {
+        display: none;
+    }
 
-.hero-grid,
-.sobre-conteudo,
-.card-front,
-.card-servico,
-.contato,
-.imovel-modal-content,
-.grupo-conteudo {
-grid-template-columns: 1fr;
-}
+    .menu-toggle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
 
-.grupo-divider {
-display: none;
-}
+    .hero-grid,
+    .sobre-conteudo,
+    .card-front,
+    .card-servico,
+    .contato,
+    .imovel-modal-content,
+    .grupo-conteudo {
+        grid-template-columns: 1fr;
+    }
 
-.hero-panel {
-max-width: 780px;
-}
+    .grupo-divider {
+        display: none;
+    }
 
-.card-front > img,
-.card-imoveis .card-front > img {
-height: 320px;
-}
+    .hero-panel {
+        max-width: 780px;
+    }
 
-.imovel-modal-content {
-max-height: 92vh;
-}
+    .card-front>img,
+    .card-imoveis .card-front>img {
+        height: 320px;
+    }
 
-.imovel-slider {
-min-height: 320px;
-}
+    .imovel-modal-content {
+        max-height: 92vh;
+    }
 
-.grupo-botoes {
-position: static;
-transform: none;
-}
+    .imovel-slider {
+        min-height: 320px;
+    }
 
-.grupo-card {
-padding-bottom: 32px;
-}
+    .grupo-botoes {
+        position: static;
+        transform: none;
+    }
+
+    .grupo-card {
+        padding-bottom: 32px;
+    }
 }
 
 @media (max-width: 768px) {
-.header-shell {
-min-height: 80px;
-}
 
-.brand img {
-width: 58px;
-height: 58px;
-}
+    .menu-toggle,
+    .menu-backdrop,
+    #mobile-menu {
+        display: none;
+    }
 
-.brand-kicker {
-font-size: 0.72rem;
-}
+    .desktop-menu,
+    .header-cta {
+        display: none;
+    }
 
-.logo {
-font-size: 1rem;
-white-space: normal;
-}
+    .menu-toggle {
+        display: inline-flex;
+    }
 
-.hero {
-min-height: auto;
-padding: 72px 0 60px;
-}
+    .menu-backdrop {
+        display: block;
+        position: fixed;
+        inset: 0;
+        background: rgba(2, 6, 23, 0.48);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity var(--transition), visibility var(--transition);
+        z-index: 1340;
+    }
 
-.hero-highlights {
-grid-template-columns: 1fr;
-}
+    #mobile-menu {
+        position: fixed;
+        top: 0;
+        right: -360px;
+        width: min(88vw, 340px);
+        height: 100dvh;
+        padding: 28px 24px;
+        background: linear-gradient(180deg, rgba(15, 23, 42, 0.98) 0%, rgba(30, 41, 59, 0.98) 100%);
+        box-shadow: -20px 0 60px rgba(2, 6, 23, 0.35);
+        z-index: 1350;
+        transition: right var(--transition);
+        display: flex;
+        flex-direction: column;
+    }
 
-.hero-actions,
-.card-buttons,
-.botoes-card,
-.imovel-buttons {
-flex-direction: column;
-}
+    .header-shell {
+        min-height: 80px;
+    }
 
-.hero-actions > *,
-.card-buttons > *,
-.botoes-card > *,
-.imovel-buttons > * {
-width: 100%;
-}
+    .brand img {
+        width: 58px;
+        height: 58px;
+    }
 
-.cards-container {
-padding: 12px 12px 18px;
-gap: 18px;
-}
+    .brand-kicker {
+        font-size: 0.72rem;
+    }
 
-.slider-btn {
-display: none;
-}
+    .logo {
+        font-size: 1rem;
+        white-space: normal;
+    }
 
-.card-front > img,
-.card-imoveis .card-front > img {
-height: 240px;
-}
+    .hero {
+        min-height: auto;
+        padding: 72px 0 60px;
+    }
 
-.card-content,
-.card-servico-copy,
-.sobre-card,
-.sobre-visual,
-.contato-copy,
-.contact-card,
-.imovel-info,
-.grupo-card {
-padding: 22px;
-}
+    .hero-highlights {
+        grid-template-columns: 1fr;
+    }
 
-.imovel-item {
-min-width: 260px;
-max-width: 260px;
-}
+    .hero-actions,
+    .card-buttons,
+    .botoes-card,
+    .imovel-buttons {
+        flex-direction: column;
+    }
 
-.left-arrow,
-.right-arrow,
-.left-arrow-outros,
-.right-arrow-outros {
-display: none;
-}
+    .hero-actions>*,
+    .card-buttons>*,
+    .botoes-card>*,
+    .imovel-buttons>* {
+        width: 100%;
+    }
 
-.close-btn,
-.close-btn-outros {
-top: 18px;
-right: 18px;
-}
+    .cards-container {
+        padding: 12px 12px 18px;
+        gap: 18px;
+    }
 
-.slider-content,
-.slider-content-outros {
-width: calc(100vw - 20px);
-padding: 12px;
-}
+    .slider-btn {
+        display: none;
+    }
 
-.whatsapp-container {
-right: 14px;
-bottom: 14px;
-}
+    .card-front>img,
+    .card-imoveis .card-front>img {
+        height: 240px;
+    }
 
-.whatsapp-container a {
-width: 60px;
-height: 60px;
-}
+    .card-content,
+    .card-servico-copy,
+    .sobre-card,
+    .sobre-visual,
+    .contato-copy,
+    .contact-card,
+    .imovel-info,
+    .grupo-card {
+        padding: 22px;
+    }
 
-.rodape {
-grid-template-columns: 1fr;
-}
+    .imovel-item {
+        min-width: 260px;
+        max-width: 260px;
+    }
+
+    .left-arrow,
+    .right-arrow,
+    .left-arrow-outros,
+    .right-arrow-outros {
+        display: none;
+    }
+
+    .close-btn,
+    .close-btn-outros {
+        top: 18px;
+        right: 18px;
+    }
+
+    .slider-content,
+    .slider-content-outros {
+        width: calc(100vw - 20px);
+        padding: 12px;
+    }
+
+    .whatsapp-container {
+        right: 14px;
+        bottom: 14px;
+    }
+
+    .whatsapp-container a {
+        width: 60px;
+        height: 60px;
+    }
+
+    .rodape {
+        grid-template-columns: 1fr;
+    }
+
+    .grupo-card {
+        display: flex;
+        flex-direction: column;
+        padding: 36px;
+        border-radius: 34px;
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        box-shadow: var(--shadow-lg);
+        backdrop-filter: blur(18px);
+    }
+
+    .grupo-coluna {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .grupo-img {
+        width: 200px;
+    }
+
+    .grupo-conteudo {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .grupo-carousel {
+        width: 100%;
+        display: block;
+        margin-bottom: 12px;
+    }
+
+    .grupo-carousel+.grupo-carousel {
+        margin-top: 8px;
+    }
 }
 
 @media (max-width: 560px) {
-.section-heading h2,
-.hero h1,
-.card-content h3,
-.card-servico-copy h3,
-.imovel-info h3,
-.sobre h2,
-.contato-copy h2 {
-word-break: break-word;
-}
 
-.social-links {
-flex-wrap: wrap;
-}
+    .section-heading h2,
+    .hero h1,
+    .card-content h3,
+    .card-servico-copy h3,
+    .imovel-info h3,
+    .sobre h2,
+    .contato-copy h2 {
+        word-break: break-word;
+    }
 
-.social-links a {
-width: 50px;
-height: 50px;
-}
+    .social-links {
+        flex-wrap: wrap;
+    }
+
+    .social-links a {
+        width: 50px;
+        height: 50px;
+    }
 }
