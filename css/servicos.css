@@ -14,7 +14,7 @@
     overflow-x: auto;
     scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
-    padding: 12px 40px;
+    padding: 12px 60px;
     scrollbar-width: none;
     -ms-overflow-style: none;
 }
@@ -32,8 +32,9 @@
     height: 220px;
     border-radius: 5px;
     border: 1px solid rgba(15, 23, 42, 0.1);
-    background: rgba(255, 255, 255, 0.92);
-    color: var(--text);
+    background: rgba(0, 89, 255, 0.92);
+    color: #fff;
+    font-weight: bold;
     box-shadow: var(--shadow-md);
     font-size: 3rem;
 }
@@ -56,7 +57,6 @@
     overflow: hidden;
     background: rgba(255, 255, 255, 0.92);
     border: 1px solid var(--border);
-    box-shadow: var(--shadow-lg);
 }
 
 .card-front {

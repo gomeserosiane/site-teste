@@ -130,7 +130,6 @@
     }
 
     .hero-actions>*,
-    .card-buttons>*,
     .botoes-card>*,
     .imovel-buttons>* {
         width: 100%;
@@ -145,7 +144,11 @@
         display: none;
     }
 
-    .card-front>img,
+    .card-front {
+        height: 550px;
+    }
+    
+    .card-front>img, 
     .card-imoveis .card-front>img {
         height: 240px;
     }
@@ -197,6 +200,7 @@
 
     .rodape {
         grid-template-columns: 1fr;
+        padding: 0 25px;
     }
 
     .grupo-card {
@@ -232,6 +236,44 @@
 
     .grupo-carousel+.grupo-carousel {
         margin-top: 8px;
+    }
+
+    .card-buttons {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 14px;
+    }
+
+    .card-buttons .btn,
+    .card-buttons .btn-info,
+    .card-buttons .btn-whats,
+    .botoes-card .btn-info-outros,
+    .botoes-card .btn-whats-outros {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        max-height: 20px;
+        padding: 10px 12px;
+        font-size: 0.82rem;
+        line-height: 1.2;
+        border-radius: 10px;
+        text-align: center;
+        gap: 8px;
+    }
+
+    .whatsapp-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .whatsapp-icon img {
+        width: 16px;
+        height: 16px;
     }
 }
 

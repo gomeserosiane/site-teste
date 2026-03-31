@@ -166,7 +166,6 @@ main {
 }
 
 .btn-primary,
-.header-cta,
 .mobile-menu-btn,
 .btn-info,
 .btn-veja-mais,
@@ -218,7 +217,7 @@ main {
 
 footer {
     margin-top: 80px;
-    background: linear-gradient(180deg, #0f172a 0%, #020617 100%);
+    background: rgba(0, 89, 255, 0.92);
     color: #cbd5e1;
     padding: 56px 0 18px;
 }
@@ -241,7 +240,7 @@ footer {
 
 .rodape p,
 .rodape a {
-    color: #cbd5e1;
+    color: #e3effd;
     font-size: 0.98rem;
 }
 
@@ -256,7 +255,8 @@ footer {
 }
 
 .rodape a:hover {
-    color: #93c5fd;
+    color: #ffffff;
+    font-weight: bold;
 }
 
 .copy {
@@ -266,7 +266,7 @@ footer {
     border-top: 1px solid rgba(148, 163, 184, 0.2);
     text-align: center;
     font-size: 0.92rem;
-    color: #94a3b8;
+    color: #e3effd;
 }
 
 .copy span {

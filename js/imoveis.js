@@ -17,23 +17,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const imoveis = {
         0: {
-            subtitulo: 'Apartamento para alugar - Marambaia',
-            descricoes: [
-                'Com 1 quarto, sala, banheiro e 38 m² de área, este apartamento é ideal para quem busca praticidade e conforto.',
-                'A região conta com infraestrutura estratégica, próxima a feiras, supermercados e farmácias, facilitando a rotina.',
-                'Os acabamentos valorizam um ambiente moderno, funcional e bem iluminado.',
-            ],
-            imagens: [
-                'images-imoveis/casa-marambaia-img1.png',
-                'images-imoveis/casa-marambaia-img2.png',
-                'images-imoveis/casa-marambaia-img3.png',
-                'images-imoveis/casa-marambaia-img4.png',
-                'images-imoveis/casa-marambaia-img5.png',
-                'images-imoveis/casa-marambaia-img6.png',
-            ],
-            indisponivel: false,
-        },
-        1: {
             subtitulo: 'Casa para vender - Souza',
             descricoes: [
                 'Boa localização, próxima a escolas, supermercados, farmácias e com fácil acesso ao transporte público.',
@@ -43,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
             imagens: ['images-imoveis/casa-souza-img1.png'],
             indisponivel: false,
         },
-        2: {
+        1: {
             subtitulo: 'Ponto comercial - Pedreira',
             descricoes: [
                 'Localizado em uma região movimentada, com área de 24,5 m² e 1 banheiro, pronto para atender diferentes perfis de negócio.',
@@ -57,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ],
             indisponivel: true,
         },
-        3: {
+        2: {
             subtitulo: 'Casa para alugar - Marambaia',
             descricoes: [
                 'Localizada na Passagem Santa Marta, nº 7, Casa A, no bairro da Marambaia, em Belém.',

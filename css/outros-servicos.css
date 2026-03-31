@@ -3,8 +3,8 @@
 }
 
 .card-servico {
-    display: grid;
-    grid-template-columns: minmax(320px, 0.9fr) minmax(0, 1.1fr);
+    display: flex;
+    flex-direction: column;
     gap: 0;
     margin: 0 auto 32px;
     overflow: hidden;
@@ -14,10 +14,18 @@
     box-shadow: var(--shadow-lg);
 }
 
-.card-servico>img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.card-servico .img-luck,
+.card-servico .img-select,
+.card-servico .select-extra {
+    display: block;
+    width: min(100%, 720px);
+    max-width: 720px;
+    max-height: 920px;
+    
+    object-position: center;
+    border-radius: 24px;
+    margin: 0 auto;
+    box-shadow: var(--shadow-md);
 }
 
 .card-servico-copy {
@@ -54,14 +62,9 @@
     gap: 8px;
 }
 
-.select-extra {
-    margin: 8px 0 24px;
-    width: 100%;
-    border-radius: 22px;
-}
-
 .video-container {
-    margin-top: 18px;
+    width: min(100%, 820px);
+    margin: 18px auto 0;
     border-radius: 24px;
     overflow: hidden;
     box-shadow: var(--shadow-md);
