@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
         img.alt = `Galeria do serviço ${currentCardIndex + 1} - imagem ${currentImageIndex + 1}`;
         sliderImagesContainer.appendChild(img);
 
-        const shouldShowArrows = images.length > 1 && window.innerWidth > 768;
+        const shouldShowArrows = images.length > 1;
         leftArrow.style.display = shouldShowArrows ? 'flex' : 'none';
         rightArrow.style.display = shouldShowArrows ? 'flex' : 'none';
     };

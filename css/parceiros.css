@@ -21,7 +21,7 @@
 .carousel-track {
     display: flex;
     align-items: center;
-    gap: 38px;
+    gap: 40px;
     width: max-content;
 }
 
@@ -35,7 +35,7 @@
 
 .carousel-track img {
     width: 170px;
-    height: 80px;
+    height: 120px;
     object-fit: contain;
     filter: saturate(1.02);
 }

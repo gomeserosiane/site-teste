@@ -1,6 +1,7 @@
 .site-header {
     position: sticky;
     top: 0;
+    padding: 10px;
     z-index: 1300;
     backdrop-filter: blur(16px);
     background: rgba(0, 89, 255, 0.92);
@@ -26,8 +27,8 @@
 }
 
 .brand img {
-    width: 72px;
-    height: 72px;
+    width: 160px;
+    height: 160px;
     object-fit: contain;
 }
 

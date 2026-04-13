@@ -60,12 +60,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 'images-imoveis/casa marambaia pass sta marta10.jpeg',
                 'images-imoveis/casa marambaia pass sta marta11.jpeg',
                 'images-imoveis/casa marambaia pass sta marta12.jpeg',
-                'images-imoveis/casa marambaia pass sta marta13.jpeg',
-                'images-imoveis/casa marambaia pass sta marta14.jpeg',
-                'images-imoveis/casa marambaia pass sta marta15.jpeg',
-                'images-imoveis/casa marambaia pass sta marta16.jpeg',
             ],
-            indisponivel: false,
+            indisponivel: true,
         },
     };
 
