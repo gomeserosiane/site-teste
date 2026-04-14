@@ -63,6 +63,24 @@ document.addEventListener('DOMContentLoaded', () => {
             ],
             indisponivel: true,
         },
+        3: {
+            subtitulo: 'Kitnet para alugar - Marambaia',
+            descricoes: [
+                'Kitnet para aluguel na Marambaia, Belém, Pará, em condição usada, pronta para você adaptar à sua rotina.',
+                'No dia a dia, você encontra 1 dormitório acolhedor que se abre para a área prática da convivência com a cozinha integrada, tudo no 1º andar, e 1 banheiro funcional.',
+                'A localização oferece fácil acesso a comércio, transporte e serviços da região, tornando a rotina mais ágil para quem está começando no mercado de aluguel. Venha conhecer e perceber como esse espaço simples pode ser seu primeiro imóvel, com praticidade e ponto de partida ideal.',
+            ],
+            imagens: [
+                'images-imoveis/kitnet-marambaia.jpeg',
+                'images-imoveis/kitnet-marambaia2.jpeg',
+                'images-imoveis/kitnet-marambaia3.jpeg',
+                'images-imoveis/kitnet-marambaia4.jpeg',
+                'images-imoveis/kitnet-marambaia5.jpeg',
+                'images-imoveis/kitnet-marambaia6.jpeg',
+                'images-imoveis/kitnet-marambaia7.jpeg',
+            ],
+            indisponivel: false,
+        },
     };
 
     let imagensAtuais = [];

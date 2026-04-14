@@ -40,6 +40,12 @@
 
     .imovel-slider {
         min-height: 320px;
+        padding: 16px;
+    }
+
+    .imovel-slider img {
+        max-height: 50vh;
+        object-fit: contain;
     }
 
     .grupo-botoes {

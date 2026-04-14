@@ -327,12 +327,20 @@
     position: relative;
     min-height: 520px;
     background: #0f172a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
 }
 
 .imovel-slider img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    max-width: 100%;
+    max-height: calc(88vh - 48px);
+    object-fit: contain;
+    object-position: center;
+    display: block;
 }
 
 .close-btn-imovel {
