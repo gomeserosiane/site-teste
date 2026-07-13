@@ -1,0 +1,73 @@
+﻿.contact-section {
+  padding: 90px 0;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 0.88fr 1fr;
+  gap: 52px;
+}
+
+.contact-list {
+  display: grid;
+  gap: 14px;
+  padding: 0;
+  margin: 28px 0 0;
+  list-style: none;
+}
+
+.contact-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #334965;
+  font-weight: 700;
+}
+
+.contact-list svg {
+  width: 20px;
+  color: var(--brand-dark);
+}
+
+.contact-form {
+  display: grid;
+  gap: 16px;
+  padding: 28px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--soft);
+}
+
+.contact-form label,
+.login-card label,
+.post-form label {
+  display: grid;
+  gap: 8px;
+  color: #30465f;
+  font-weight: 800;
+}
+
+.contact-form input,
+.contact-form textarea,
+.login-card input,
+.post-form input,
+.post-form textarea {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 13px 14px;
+  color: var(--ink);
+  background: #fff;
+  outline: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus,
+.login-card input:focus,
+.post-form input:focus,
+.post-form textarea:focus {
+  border-color: var(--brand);
+  box-shadow: 0 0 0 4px rgba(18, 101, 254, 0.18);
+}
+
+

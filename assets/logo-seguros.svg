@@ -1,0 +1,10 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 180" role="img" aria-labelledby="title">
+  <title id="title">Gomes Seguros</title>
+  <rect width="320" height="180" rx="16" fill="#ffffff"/>
+  <path d="M82 44l50 20v36c0 34-22 54-50 68-28-14-50-34-50-68V64l50-20z" fill="#e8f6fc" stroke="#1265FE" stroke-width="8"/>
+  <path d="M62 92l15 15 30-34" fill="none" stroke="#1265FE" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="150" y="82" fill="#18324a" font-family="Arial, sans-serif" font-size="28" font-weight="800">Gomes</text>
+  <text x="150" y="116" fill="#1265FE" font-family="Arial, sans-serif" font-size="24" font-weight="700">Seguros</text>
+</svg>
+
+

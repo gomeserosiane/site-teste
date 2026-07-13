@@ -1,0 +1,47 @@
+﻿.about-section {
+  padding: 88px 0;
+  background: var(--soft);
+}
+
+.about-grid {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 0.84fr;
+  gap: 56px;
+}
+
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.metrics span {
+  min-height: 96px;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+}
+
+.metrics strong {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--brand-dark);
+  font-size: 1.45rem;
+}
+
+.about-panel {
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.about-panel img {
+  width: 100%;
+  height: 520px;
+  object-fit: cover;
+}
+
+

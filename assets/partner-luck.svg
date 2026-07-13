@@ -1,0 +1,8 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 100">
+  <rect width="260" height="100" rx="12" fill="#ffffff"/>
+  <path d="M38 34h60v36H38z" fill="#e8f6fc" stroke="#1265FE" stroke-width="6"/>
+  <path d="M46 46h44" stroke="#1265FE" stroke-width="6" stroke-linecap="round"/>
+  <text x="112" y="59" fill="#18324a" font-family="Arial, sans-serif" font-size="28" font-weight="800">Luck Card</text>
+</svg>
+
+

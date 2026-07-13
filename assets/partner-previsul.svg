@@ -1,0 +1,7 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 100">
+  <rect width="260" height="100" rx="12" fill="#ffffff"/>
+  <circle cx="52" cy="50" r="24" fill="#1265FE"/>
+  <text x="88" y="59" fill="#18324a" font-family="Arial, sans-serif" font-size="28" font-weight="800">Previsul</text>
+</svg>
+
+

@@ -1,934 +1,339 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="theme-color" content="#0f172a">
-
-    <title>Grupo Gomes & Rosiane | Soluções em negócios</title>
-    <meta name="description"
-        content="Grupo em Belém especializado em consultas médicas, planos funerários, seguros, certificação digital, mobilidade urbana, imóveis, planos de saúde, odontologia, ótica, contabilidade e documentação empresarial.">
-    <meta name="keywords"
-        content="Grupo Gomes e Rosiane, Belém, consultas médicas, planos funerários, seguros, certificados digitais, mobilidade urbana, imóveis, planos de saúde, odontologia, ótica, contabilidade, documentação empresarial">
-    <meta name="author" content="Reginaldo Lima">
-    <meta name="robots" content="index, follow">
-    <meta name="googlebot" content="index, follow">
-    <meta name="bingbot" content="index, follow">
-    <meta name="rating" content="general">
-    <meta name="language" content="pt-BR">
-
-    <meta property="og:title" content="Grupo Gomes & Rosiane | Soluções em negócios">
-    <meta property="og:description"
-        content="Soluções integradas em saúde, seguros, imóveis, documentação, mobilidade urbana, contabilidade e muito mais em Belém.">
-    <meta property="og:image" content="https://grupogomeserosiane.com.br/images-banner/logo-grupo.png">
-    <meta property="og:url" content="https://grupogomeserosiane.com.br/">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Grupo Gomes & Rosiane">
-    <meta property="og:locale" content="pt-BR">
-
-    <link rel="icon" href="images-banner/logo-grupo.png" type="image/png">
-    <link rel="apple-touch-icon" href="images-banner/logo-grupo.png">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap"
-        rel="stylesheet">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-    <link rel="stylesheet" href="css/style.css?v=20260330">
-    <link rel="stylesheet" href="css/header.css?v=20260330">
-    <link rel="stylesheet" href="css/hero.css?v=20260330">
-    <link rel="stylesheet" href="css/sobre.css?v=20260330">
-    <link rel="stylesheet" href="css/servicos.css?v=20260330">
-    <link rel="stylesheet" href="css/grupostatus.css?v=20260330">
-    <link rel="stylesheet" href="css/outros-servicos.css?v=20260330">
-    <link rel="stylesheet" href="css/parceiros.css?v=20260330">
-    <link rel="stylesheet" href="css/contato.css?v=20260330">
-    <link rel="stylesheet" href="css/responsivo.css?v=20260330">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Grupo Gomes & Rosiane - serviços médicos, planos funerários, seguros, certificados digitais, mobilidade urbana, imóveis, saúde, ótica, contabilidade e documentação.">
+  <title>Grupo Gomes & Rosiane</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/about.css">
+  <link rel="stylesheet" href="css/services.css">
+  <link rel="stylesheet" href="css/imobiliaria.css">
+  <link rel="stylesheet" href="css/blog.css">
+  <link rel="stylesheet" href="css/contact.css">
+  <link rel="stylesheet" href="css/responsive.css">
 </head>
-
 <body>
-    <header class="site-header" id="topo">
-        <div class="header-shell">
-            <a class="brand" href="#home" aria-label="Ir para o início do site">
-                <img src="images-banner/logo-grupo.png" data-aos="fade-right" alt="Logotipo do Grupo Gomes & Rosiane">
-                <div class="brand-copy">
-                    <span class="brand-kicker">Grupo empresarial em Belém</span>
-                    <strong class="logo" data-aos="fade-up">Grupo Gomes & Rosiane</strong>
-                </div>
-            </a>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Ir para o início">
+      <span class="brand-mark">GR</span>
+      <span>
+        <strong>Grupo Gomes & Rosiane</strong>
+        <small>Grupo de empresas em Belém/PA</small>
+      </span>
+    </a>
 
-            <nav class="desktop-menu" data-aos="fade-left" aria-label="Menu principal desktop">
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#sobre">Sobre</a></li>
-                    <li><a href="#servicos">Serviços</a></li>
-                    <li><a href="#grupo-status">Novidades</a></li>
-                    <li><a href="#contato">Contato</a></li>
-                </ul>
-            </nav>
+    <button class="menu-button" type="button" aria-label="Abrir menu" data-menu-button>
+      <i data-lucide="menu"></i>
+    </button>
 
-            <a class="header-cta" href="https://wa.me/5591999635260" target="_blank" rel="noopener noreferrer">
-                Fale no WhatsApp
-            </a>
+    <nav class="main-nav" data-main-nav>
+      <a href="#home">Home</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#imobiliaria">Imobiliária</a>
+      <a href="#blog">Novidades</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
 
-            <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu" aria-controls="mobile-menu"
-                aria-expanded="false">☰</button>
+  <main>
+    <section class="hero-section" id="home">
+      <div class="hero-media" aria-hidden="true"></div>
+      <div class="container hero-layout">
+        <div class="hero-content">
+          <p class="section-kicker">Serviços integrados para pessoas e empresas</p>
+          <h1>Grupo Gomes & Rosiane</h1>
+          <p>Atendimento especializado em saúde, seguros, imóveis, documentação, certificados digitais, contabilidade, mobilidade urbana, ótica e proteção familiar.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#servicos"><i data-lucide="briefcase-business"></i> Conhecer serviços</a>
+            <a class="button button-light" href="https://wa.me/5591999635260" target="_blank" rel="noopener"><i data-lucide="message-circle"></i> Falar no WhatsApp</a>
+          </div>
         </div>
 
-        <div class="menu-backdrop" id="menu-backdrop"></div>
+        <div class="hero-logos" aria-label="Empresas e frentes do grupo">
+          <img src="assets/logo-saude.svg" alt="Gomes Saúde">
+          <img src="assets/logo-seguros.svg" alt="Gomes Seguros">
+          <img src="assets/logo-imoveis.svg" alt="Gomes Imóveis">
+          <img src="assets/logo-digital.svg" alt="Gomes Digital">
+        </div>
+      </div>
+    </section>
 
-        <nav id="mobile-menu" aria-label="Menu principal mobile">
-            <button class="close-menu" id="close-menu" aria-label="Fechar menu">✕</button>
+    <section class="about-section" id="sobre">
+      <div class="container about-grid">
+        <div>
+          <p class="section-kicker">Sobre nós</p>
+          <h2>Um grupo com soluções para etapas importantes da vida e dos negócios.</h2>
+          <p>O Grupo Gomes & Rosiane conecta diferentes frentes de atuação em um ecossistema de serviços completo. A proposta é simplificar decisões importantes com orientação clara, atendimento próximo e parceiros confiáveis.</p>
+          <div class="metrics">
+            <span><strong>10+</strong> frentes de serviço</span>
+            <span><strong>Belém</strong> atendimento local</span>
+            <span><strong>Ágil</strong> contato direto</span>
+          </div>
+        </div>
+        <div class="about-panel">
+          <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=900&q=80" alt="Equipe empresarial em reunião">
+        </div>
+      </div>
+    </section>
 
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#servicos">Serviços</a></li>
-                <li><a href="#grupo-status">Novidades</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
+    <section class="services-section" id="servicos">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">Portfólio</p>
+          <h2>Nossos serviços</h2>
+          <p>Veja uma solução por vez e escolha a área que melhor atende sua necessidade.</p>
+        </div>
 
-            <div class="mobile-menu-footer">
-                <img src="images-banner/logo-2.png" alt="Identidade visual do Grupo Gomes & Rosiane">
-                <p>Consultoria, saúde, imóveis, proteção e documentação em um só grupo.</p>
-                <a href="https://wa.me/5591999635260" target="_blank" rel="noopener noreferrer" class="mobile-menu-btn">
-                    Conversar agora
-                </a>
-            </div>
+        <div class="slider-shell" data-service-slider>
+          <button class="slider-arrow slider-arrow-left" type="button" aria-label="Serviço anterior" data-service-prev>
+            <i data-lucide="chevron-left"></i>
+          </button>
+
+          <div class="service-stage">
+            <article class="service-card active" data-service-card="0" data-service="Consultas e planos">
+              <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=900&q=80" alt="Atendimento médico">
+              <div class="service-card-body">
+                <span class="service-category">Saúde</span>
+                <h3>Consultas e planos</h3>
+                <p>Consultas médicas, planos de saúde, planos odontológicos, cartões de benefícios e orientação para cuidar melhor da rotina familiar.</p>
+                <div class="tag-list">
+                  <span>Consultas</span><span>Planos</span><span>Odonto</span><span>Benefícios</span>
+                </div>
+                <div class="service-actions">
+                  <button class="button button-primary" type="button" data-service-detail="0"><i data-lucide="info"></i> Saiba mais</button>
+                  <a class="button button-whatsapp" href="https://wa.me/5591999635260?text=ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20a%20respeito%20de%20Consultas%20e%20planos" target="_blank" rel="noopener"><i data-lucide="message-circle"></i> Entre em contato</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="service-card" data-service-card="1" data-service="Seguros e planos funerários">
+              <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=900&q=80" alt="Contratos e seguros">
+              <div class="service-card-body">
+                <span class="service-category">Proteção</span>
+                <h3>Seguros e planos funerários</h3>
+                <p>Soluções para vida, automóvel, residência, empresas e proteção familiar, com atendimento consultivo para escolher a cobertura correta.</p>
+                <div class="tag-list">
+                  <span>Vida</span><span>Auto</span><span>Residencial</span><span>Funerário</span>
+                </div>
+                <div class="service-actions">
+                  <button class="button button-primary" type="button" data-service-detail="1"><i data-lucide="info"></i> Saiba mais</button>
+                  <a class="button button-whatsapp" href="https://wa.me/5591999635260?text=ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20a%20respeito%20de%20Seguros%20e%20planos%20funer%C3%A1rios" target="_blank" rel="noopener"><i data-lucide="message-circle"></i> Entre em contato</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="service-card" data-service-card="2" data-service="Imóveis e regularização">
+              <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=900&q=80" alt="Empreendimento imobiliário">
+              <div class="service-card-body">
+                <span class="service-category">Imobiliário</span>
+                <h3>Imóveis e regularização</h3>
+                <p>Compra, venda, aluguel, administração, avaliação e legalização de imóveis com suporte para reduzir burocracias e dar segurança.</p>
+                <div class="tag-list">
+                  <span>Venda</span><span>Aluguel</span><span>Avaliação</span><span>Legalização</span>
+                </div>
+                <div class="service-actions">
+                  <button class="button button-primary" type="button" data-service-detail="2"><i data-lucide="info"></i> Saiba mais</button>
+                  <a class="button button-whatsapp" href="https://wa.me/5591999635260?text=ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20a%20respeito%20de%20Im%C3%B3veis%20e%20regulariza%C3%A7%C3%A3o" target="_blank" rel="noopener"><i data-lucide="message-circle"></i> Entre em contato</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="service-card" data-service-card="3" data-service="Contabilidade e documentação">
+              <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=900&q=80" alt="Documentos empresariais">
+              <div class="service-card-body">
+                <span class="service-category">Empresarial</span>
+                <h3>Contabilidade e documentação</h3>
+                <p>Abertura de empresas, certificados digitais, folha de pagamento, regularizações e documentação para pessoas físicas e jurídicas.</p>
+                <div class="tag-list">
+                  <span>CNPJ</span><span>Certificado digital</span><span>Folha</span><span>Regularização</span>
+                </div>
+                <div class="service-actions">
+                  <button class="button button-primary" type="button" data-service-detail="3"><i data-lucide="info"></i> Saiba mais</button>
+                  <a class="button button-whatsapp" href="https://wa.me/5591999635260?text=ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20a%20respeito%20de%20Contabilidade%20e%20documenta%C3%A7%C3%A3o" target="_blank" rel="noopener"><i data-lucide="message-circle"></i> Entre em contato</a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <button class="slider-arrow slider-arrow-right" type="button" aria-label="Próximo serviço" data-service-next>
+            <i data-lucide="chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="real-estate-section" id="imobiliaria">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">Imobiliária</p>
+          <h2>Imóveis em destaque</h2>
+          <p>Consulte imóveis disponíveis e indisponíveis para aluguel ou venda.</p>
+        </div>
+
+        <div class="property-filters" aria-label="Filtrar imóveis por status">
+          <button class="active" type="button" data-property-filter="todos">Todos</button>
+          <button type="button" data-property-filter="Disponível para alugar">Para alugar</button>
+          <button type="button" data-property-filter="Disponível para venda">Para venda</button>
+          <button type="button" data-property-filter="Imóvel alugado">Alugados</button>
+          <button type="button" data-property-filter="Imóvel vendido">Vendidos</button>
+        </div>
+
+        <div class="property-grid" id="property-list" aria-live="polite"></div>
+      </div>
+
+      <div class="property-lightbox hidden" id="property-lightbox" aria-modal="true" role="dialog">
+        <div class="property-lightbox-frame">
+          <button class="property-lightbox-close" type="button" aria-label="Fechar imagem" id="property-lightbox-close">X</button>
+          <button class="property-lightbox-arrow property-lightbox-prev" type="button" aria-label="Foto anterior" id="property-lightbox-prev"><i data-lucide="chevron-left"></i></button>
+          <img id="property-lightbox-image" src="" alt="Imagem ampliada do imóvel">
+          <button class="property-lightbox-arrow property-lightbox-next" type="button" aria-label="Próxima foto" id="property-lightbox-next"><i data-lucide="chevron-right"></i></button>
+          <div class="property-lightbox-dots" id="property-lightbox-dots"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="service-detail-section hidden" id="service-detail" tabindex="-1">
+      <div class="container service-detail-layout">
+        <div class="service-detail-hero">
+          <button class="button button-light" type="button" data-back-services><i data-lucide="arrow-left"></i> Voltar ao site</button>
+          <p class="section-kicker" id="service-detail-category">Serviço</p>
+          <h2 id="service-detail-title">Título do serviço</h2>
+          <p id="service-detail-intro">Descrição principal do serviço selecionado.</p>
+          <div class="detail-actions">
+            <a class="button button-whatsapp" id="service-detail-whatsapp" href="https://wa.me/5591999635260" target="_blank" rel="noopener"><i data-lucide="message-circle"></i> Entre em contato</a>
+            <a class="button button-light" href="#contato"><i data-lucide="send"></i> Ir para contato</a>
+          </div>
+        </div>
+
+        <div class="detail-gallery">
+          <button class="detail-gallery-arrow" type="button" aria-label="Foto anterior" data-detail-prev><i data-lucide="chevron-left"></i></button>
+          <img id="service-detail-image" src="" alt="">
+          <button class="detail-gallery-arrow" type="button" aria-label="Próxima foto" data-detail-next><i data-lucide="chevron-right"></i></button>
+          <div class="detail-gallery-dots" id="service-detail-dots"></div>
+        </div>
+
+        <div class="service-detail-content">
+          <article>
+            <h3>Como o atendimento funciona</h3>
+            <p id="service-detail-text">Descrição do serviço selecionado.</p>
+          </article>
+          <article>
+            <h3>Benefícios para o cliente</h3>
+            <p id="service-detail-benefits">Benefícios do serviço selecionado.</p>
+          </article>
+          <article>
+            <h3>Indicado para</h3>
+            <ul id="service-detail-list"></ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="blog-section" id="blog">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">Novidades</p>
+          <h2>Publicações recentes</h2>
+          <p>Notícias, comunicados e atualizações cadastradas pelo CRM.</p>
+        </div>
+        <div class="slider-shell blog-slider-shell">
+          <button class="slider-arrow slider-arrow-left" type="button" aria-label="Publicação anterior" data-blog-prev>
+            <i data-lucide="chevron-left"></i>
+          </button>
+          <div class="blog-stage" id="blog-posts" aria-live="polite"></div>
+          <button class="slider-arrow slider-arrow-right" type="button" aria-label="Próxima publicação" data-blog-next>
+            <i data-lucide="chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="partners-section" aria-label="Marcas parceiras">
+      <div class="partners-marquee">
+        <div class="partners-track">
+          <img src="assets/partner-previsul.svg" alt="Previsul">
+          <img src="assets/partner-suhai.svg" alt="Suhai">
+          <img src="assets/partner-select.svg" alt="Select">
+          <img src="assets/partner-metlife.svg" alt="MetLife">
+          <img src="assets/partner-luck.svg" alt="Luck Card">
+          <img src="assets/partner-mapfre.svg" alt="Mapfre">
+          <img src="assets/partner-previsul.svg" alt="Previsul">
+          <img src="assets/partner-suhai.svg" alt="Suhai">
+          <img src="assets/partner-select.svg" alt="Select">
+          <img src="assets/partner-metlife.svg" alt="MetLife">
+          <img src="assets/partner-luck.svg" alt="Luck Card">
+          <img src="assets/partner-mapfre.svg" alt="Mapfre">
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contato">
+      <div class="container contact-grid">
+        <div>
+          <p class="section-kicker">Contato</p>
+          <h2>Fale com o Grupo Gomes & Rosiane</h2>
+          <p>Preencha os dados e envie sua mensagem diretamente pelo WhatsApp.</p>
+          <ul class="contact-list">
+            <li><i data-lucide="phone"></i> (91) 99963-5260</li>
+            <li><i data-lucide="clock"></i> Seg. à Sex. - 08h30 às 17h00</li>
+            <li><i data-lucide="map-pin"></i> Travessa Vileta, 1414, Belém - PA, 66087-421</li>
+          </ul>
+        </div>
+        <form class="contact-form" id="contact-form">
+          <label>Nome<input type="text" id="contact-name" required></label>
+          <label>E-mail<input type="email" id="contact-email" required></label>
+          <label>WhatsApp<input type="tel" id="contact-phone" required></label>
+          <label>Assunto<textarea id="contact-subject" rows="4" required></textarea></label>
+          <button class="button button-primary" type="submit"><i data-lucide="send"></i> Enviar pelo WhatsApp</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>Grupo Gomes & Rosiane</h3>
+        <p>Grupo especializado em serviços médicos, planos funerários, seguros, certificados digitais, mobilidade urbana, imóveis, planos de saúde e odontológicos, ótica, serviços contábeis e documentação.</p>
+      </div>
+      <div>
+        <h3>Navegue</h3>
+        <nav class="footer-nav">
+          <a href="#home">Home</a>
+          <a href="#sobre">Sobre</a>
+          <a href="#servicos">Serviços</a>
+          <a href="#imobiliaria">Imobiliária</a>
+          <a href="#blog">Novidades</a>
+          <a href="#contato">Contato</a>
         </nav>
-    </header>
-
-    <main>
-        <section id="home" class="hero">
-            <div class="hero-overlay"></div>
-            <div class="hero-images" data-aos="fade-up">
-                <img src="images-logos/logo-adm.png" alt="Imagem 1">
-                <img src="images-logos/logo-contadora.png" alt="Imagem 2">
-                <img src="images-logos/logo-otica.png" alt="Imagem 3">
-                <img src="images-logos/logo-funeraria2.png" alt="Imagem 4">
-            </div>
-            <div class="hero-grid">
-                <div class="hero-copy" data-aos="fade-right">
-                    <span class="hero-badge">Soluções integradas para pessoas e empresas</span>
-                    <h1>Olá, somos o <span>Grupo Gomes & Rosiane</span>.</h1>
-                    <p>
-                        Reunimos serviços estratégicos em saúde, seguros, imóveis, documentação,
-                        mobilidade urbana, ótica e contabilidade para atender com agilidade, confiança e visão de
-                        negócio.
-                    </p>
-
-                    <div class="hero-actions">
-                        <a href="#servicos" class="btn-primary">Conhecer serviços</a>
-                        <a href="https://wa.me/5591999635260" target="_blank" rel="noopener noreferrer"
-                            class="btn-secondary">
-                            Falar com especialista
-                        </a>
-                    </div>
-
-                    <div class="social-links" aria-label="Redes sociais do Grupo Gomes & Rosiane">
-                        <a href="https://www.instagram.com/grupogomeserosiane/" target="_blank"
-                            rel="noopener noreferrer" aria-label="Instagram do Grupo Gomes & Rosiane"><img
-                                src="images-icons/icons8-instagram-96.png" alt="Ícone do Instagram"></a>
-                        <a href="https://web.facebook.com/profile.php?id=61584559665907&locale=pt_BR" target="_blank"
-                            rel="noopener noreferrer" aria-label="Facebook do Grupo Gomes & Rosiane"><img
-                                src="images-icons/icons8-facebook-96.png" alt="Ícone do Facebook"></a>
-                        <a href="https://wa.me/5591999635260" target="_blank" rel="noopener noreferrer"
-                            aria-label="WhatsApp do Grupo Gomes & Rosiane"><img
-                                src="images-icons/icons8-whatsapp-96.png" alt="Ícone do WhatsApp"></a>
-                    </div>
-                </div>
-
-                <aside class="hero-panel" data-aos="fade-left">
-                    <div class="hero-panel-card">
-                        <span class="hero-panel-kicker">Atendimento completo</span>
-                        <h2>Um grupo, múltiplas frentes de solução.</h2>
-                        <ul>
-                            <li>Consultas médicas e planos de saúde</li>
-                            <li>Seguros, proteção funerária e certificação digital</li>
-                            <li>Serviços imobiliários, contábeis e documentação</li>
-                        </ul>
-                    </div>
-
-                    <div class="hero-highlights">
-                        <article>
-                            <strong>+10</strong>
-                            <span>frentes de serviço</span>
-                        </article>
-                        <article>
-                            <strong>Belém</strong>
-                            <span>atendimento local e humanizado</span>
-                        </article>
-                        <article>
-                            <strong>WhatsApp</strong>
-                            <span>contato rápido e direto</span>
-                        </article>
-                    </div>
-                </aside>
-            </div>
-        </section>
-
-        <section id="sobre" class="sobre section-shell">
-            <div class="section-heading" data-aos="fade-down">
-                <span class="section-badge">Sobre nós</span>
-                <h2>Uma operação pensada para resolver demandas do começo ao fim.</h2>
-            </div>
-
-            <div class="sobre-conteudo">
-                <div class="sobre-card" data-aos="fade-right">
-                    <p>
-                        O Grupo Gomes & Rosiane é formado por empresas especializadas em diferentes ramos de atividades,
-                        conectando conveniência, segurança e suporte estratégico em um só ecossistema.
-                    </p>
-                    <p>
-                        Atuamos com planos funerários, seguros de vida, automotivo, residencial, empresarial e em grupo,
-                        certificados digitais, documentação empresarial, planos de saúde e odontológicos, assessoria
-                        contábil,
-                        serviços de mobilidade urbana e serviços imobiliários como regularização, administração,
-                        avaliação,
-                        compra, venda e aluguel.
-                    </p>
-
-                    <div class="sobre-pillars">
-                        <span>Atendimento consultivo</span>
-                        <span>Rede de parceiros</span>
-                        <span>Serviços integrados</span>
-                        <span>Soluções para empresas e famílias</span>
-                    </div>
-                </div>
-
-                <div class="sobre-visual" data-aos="fade-left">
-                    <img src="images-banner/logo-2.png" alt="Marca institucional do Grupo Gomes & Rosiane">
-                </div>
-            </div>
-        </section>
-
-        <section id="servicos" class="servicos">
-            <div class="section-shell">
-                <div class="section-heading" data-aos="fade-down">
-                    <span class="section-badge">Portfólio</span>
-                    <h2>Nossos serviços</h2>
-                    <p>Explore cada frente de atuação e veja onde o grupo pode apoiar você ou o seu negócio.</p>
-                </div>
-
-                <div class="slider-wrapper">
-                    <div class="cards-container" aria-label="Carrossel de serviços">
-                        <button class="slider-btn left-btn" aria-label="Voltar serviço">‹</button>
-
-                        <!-- CONSULTAS MÉDICAS -->
-                        <article class="card" data-aos="fade-right">
-                            <div class="card-front">
-                                <img src="images-banner/banner-consultas.png"
-                                    alt="Banner do serviço de consultas médicas">
-                                <div class="card-content">
-                                    <span class="card-tag">Saúde</span>
-                                    <h3>Consultas Médicas</h3>
-                                    <p>Clínico geral, ginecologia, oftalmologia e pediatria.</p>
-                                    <div class="card-buttons">
-                                        <button class="btn btn-info" data-card="0" type="button">Mais
-                                            informações</button>
-                                        <a href="https://wa.me/5591999635260" target="_blank" rel="noopener noreferrer"
-                                            class="btn btn-whats">
-                                            Entre em contato
-                                            <span class="whatsapp-icon"><img src="images-icons/icons8-whatsapp-96.png"
-                                                    alt="Ícone do WhatsApp"></span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </article>
-
-                        <!-- PLANOS FUNERÁRIOS -->
-                        <article class="card" data-aos="fade-left">
-                            <div class="card-front">
-                                <img src="images-banner/banner-funeraria.png"
-                                    alt="Banner do serviço de planos funerários">
-                                <div class="card-content">
-                                    <span class="card-tag">Proteção</span>
-                                    <h3>Planos Funerários</h3>
-                                    <p>Planos familiar, individual e empresarial.</p>
-                                    <div class="card-buttons">
-                                        <button class="btn btn-info" data-card="1" type="button">Mais
-                                            informações</button>
-                                        <a href="https://wa.me/5591999635260" target="_blank" rel="noopener noreferrer"
-                                            class="btn btn-whats">
-                                            Entre em contato
-                                            <span class="whatsapp-icon"><img src="images-icons/icons8-whatsapp-96.png"
-                                                    alt="Ícone do WhatsApp"></span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </article>
-
-                        <!-- SEGUROS -->
-                        <article class="card" data-aos="fade-right">
-                            <div class="card-front">
-                                <img src="images-banner/banner-seguros.png" alt="Banner do serviço de seguros">
-                                <div class="card-content">
-                                    <span class="card-tag">Seguros</span>
-                                    <h3>Seguros</h3>
-                                    <p>Seguro de vida, automotivo, empresarial e residencial.</p>
-                                    <div class="card-buttons">
-                                        <button class="btn btn-info" data-card="2" type="button">Mais
-                                            informações</button>
-                                        <a href="https://wa.me/5591999635260" target="_blank" rel="noopener noreferrer"
-                                            class="btn btn-whats">
-                                            Entre em contato
-                                            <span class="whatsapp-icon"><img src="images-icons/icons8-whatsapp-96.png"
-                                                    alt="Ícone do WhatsApp"></span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </article>
-
-                        <!-- SEGUROS PARA MOTORISTAS -->
-                        <article class="card" data-aos="fade-left">
-                            <div class="card-front">
-                                <img src="images-banner/banner-mobilidade-urbana.png"
-                                    alt="Banner do serviço de seguros para motoristas">
-                                <div class="card-content">
-                                    <span class="card-tag">Mobilidade</span>
-                                    <h3>Seguros para Motoristas</h3>
-                                    <p>Taxista, mototaxista, motorista de app, empresarial e residencial.</p>
-                                    <div class="card-buttons">
-                                        <button class="btn btn-info" data-card="3" type="button">Mais
-                                            informações</button>
-                                        <a href="https://wa.me/5591999635260" target="_blank" rel="noopener noreferrer"
-                                            class="btn btn-whats">
-                                            Entre em contato
-                                            <span class="whatsapp-icon"><img src="images-icons/icons8-whatsapp-96.png"
-                                                    alt="Ícone do WhatsApp"></span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </article>
-
-                        <!-- CERTIFICADOS DIGITAIS -->
-                        <article class="card" data-aos="fade-right">
-                            <div class="card-front">
-                                <img src="images-banner/banner-certificados.png"
-                                    alt="Banner do serviço de certificados digitais">
-                                <div class="card-content">
-                                    <span class="card-tag">Documentação</span>
-                                    <h3>Certificados Digitais</h3>
-                                    <p>E-CPF, E-CNPJ, consultas de SPC e Serasa.</p>
-                                    <div class="card-buttons">
-                                        <button class="btn btn-info" data-card="4" type="button">Mais
-                                            informações</button>
-                                        <a href="https://wa.me/5591999635260" target="_blank" rel="noopener noreferrer"
-                                            class="btn btn-whats">
-                                            Entre em contato
-                                            <span class="whatsapp-icon"><img src="images-icons/icons8-whatsapp-96.png"
-                                                    alt="Ícone do WhatsApp"></span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </article>
-
-                        <!-- SERVIÇOS IMOBILIÁRIOS -->
-                        <article class="card card-imoveis" data-aos="fade-left">
-                            <div class="card-front">
-                                <img src="images-banner/banner-imobiliaria.png" alt="Banner do serviço imobiliário">
-                                <div class="card-content">
-                                    <span class="card-tag">Imobiliário</span>
-                                    <h3>Serviços Imobiliários</h3>
-                                    <p>Vendas, aluguéis, administração e legalização de imóveis.</p>
-
-                                    <h4 class="imoveis-title">Confira nossos imóveis disponíveis</h4>
-
-                                    <div class="imoveis-carousel" aria-label="Carrossel de imóveis disponíveis">
-                                        <div class="imoveis-track">
-                                            <div class="imovel-item" data-imovel="0">
-                                                <img src="images-imoveis/casa-souza-img1.png"
-                                                    alt="Casa no bairro Souza">
-                                                <span class="imovel-titulo">Casa - Souza</span>
-                                                <span class="imovel-status status-compra">Compre-me</span>
-                                            </div>
-
-                                            <div class="imovel-item" data-imovel="1">
-                                                <img src="images-imoveis/ponto-comercial-pedreira-img1.png"
-                                                    alt="Ponto comercial na Pedreira">
-                                                <span class="imovel-titulo">Ponto Comercial - Pedreira</span>
-                                                <span class="imovel-status status-indisponivel">Alugado</span>
-                                            </div>
-
-                                            <div class="imovel-item" data-imovel="2">
-                                                <img src="images-imoveis/casa marambaia pass sta marta2.jpeg"
-                                                    alt="Casa na Marambaia">
-                                                <span class="imovel-titulo">Casa - Marambaia</span>
-                                                <span class="imovel-status status-indisponivel">Alugado</span>
-                                            </div>
-
-                                            <div class="imovel-item" data-imovel="3">
-                                                <img src="images-imoveis/kitnet-marambaia2.jpeg"
-                                                    alt="Casa na Marambaia">
-                                                <span class="imovel-titulo">Kitnet - Marambaia</span>
-                                                <span class="imovel-status status-aluguel">Alugue-me</span>
-                                            </div>
-
-                                            <div class="imovel-item" data-imovel="0">
-                                                <img src="images-imoveis/casa-souza-img1.png"
-                                                    alt="Casa no bairro Souza">
-                                                <span class="imovel-titulo">Casa - Souza</span>
-                                                <span class="imovel-status status-compra">Compre-me</span>
-                                            </div>
-
-                                            <div class="imovel-item" data-imovel="1">
-                                                <img src="images-imoveis/ponto-comercial-pedreira-img1.png"
-                                                    alt="Ponto comercial na Pedreira">
-                                                <span class="imovel-titulo">Ponto Comercial - Pedreira</span>
-                                                <span class="imovel-status status-indisponivel">Alugado</span>
-                                            </div>
-
-                                            <div class="imovel-item" data-imovel="2">
-                                                <img src="images-imoveis/casa marambaia pass sta marta2.jpeg"
-                                                    alt="Casa na Marambaia">
-                                                <span class="imovel-titulo">Casa - Marambaia</span>
-                                                <span class="imovel-status status-indisponivel">Alugado</span>
-                                            </div>
-
-                                            <div class="imovel-item" data-imovel="3">
-                                                <img src="images-imoveis/kitnet-marambaia2.jpeg"
-                                                    alt="Casa na Marambaia">
-                                                <span class="imovel-titulo">Kitnet - Marambaia</span>
-                                                <span class="imovel-status status-aluguel">Alugue-me</span>
-                                            </div>
-
-                                        </div>
-                                    </div>
-
-                                    <div class="card-buttons card-buttons-inline">
-                                        <a href="https://gomeserosiane.com.br" target="_blank" rel="noopener noreferrer"
-                                            class="btn btn-veja-mais">
-                                            Veja mais detalhes
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </article>
-
-                        <!-- PLANOS DE SAÚDE E ODONTOLÓGICOS -->
-                        <article class="card" data-aos="fade-right">
-                            <div class="card-front">
-                                <img src="images-banner/banner-planos-saude-odonto.png"
-                                    alt="Banner do serviço de planos de saúde e odontológicos">
-                                <div class="card-content">
-                                    <span class="card-tag">Saúde corporativa e familiar</span>
-                                    <h3>Planos de Saúde e Odontológicos</h3>
-                                    <p>Consulte nossos planos Select e Luck Card.</p>
-                                    <div class="card-buttons">
-                                        <button class="btn btn-info" data-card="6" type="button">Mais
-                                            informações</button>
-                                        <a href="https://wa.me/5591999635260" target="_blank" rel="noopener noreferrer"
-                                            class="btn btn-whats">
-                                            Entre em contato
-                                            <span class="whatsapp-icon"><img src="images-icons/icons8-whatsapp-96.png"
-                                                    alt="Ícone do WhatsApp"></span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </article>
-
-                        <!-- ÓTICA -->
-                        <article class="card" data-aos="fade-left">
-                            <div class="card-front">
-                                <img src="images-banner/banner-otica-teste.png" alt="Banner do serviço de ótica">
-                                <div class="card-content">
-                                    <span class="card-tag">Ótica</span>
-                                    <h3>Ótica</h3>
-                                    <p>Armações de óculos de sol, óculos de grau e lentes.</p>
-                                    <div class="card-buttons">
-                                        <button class="btn btn-info" data-card="7" type="button">Mais
-                                            informações</button>
-                                        <a href="https://wa.me/5591999635260" target="_blank" rel="noopener noreferrer"
-                                            class="btn btn-whats">
-                                            Entre em contato
-                                            <span class="whatsapp-icon"><img src="images-icons/icons8-whatsapp-96.png"
-                                                    alt="Ícone do WhatsApp"></span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </article>
-
-                        <!-- CONTABILIDADE -->
-                        <article class="card" data-aos="fade-right">
-                            <div class="card-front">
-                                <img src="images-banner/banner-contabilidade.png"
-                                    alt="Banner do serviço de contabilidade">
-                                <div class="card-content">
-                                    <span class="card-tag">Empresarial</span>
-                                    <h3>Contabilidade</h3>
-                                    <p>Abertura e fechamento empresarial, assessoria financeira.</p>
-                                    <div class="card-buttons">
-                                        <button class="btn btn-info" data-card="8" type="button">Mais
-                                            informações</button>
-                                        <a href="https://wa.me/5591999635260" target="_blank" rel="noopener noreferrer"
-                                            class="btn btn-whats">
-                                            Entre em contato
-                                            <span class="whatsapp-icon"><img src="images-icons/icons8-whatsapp-96.png"
-                                                    alt="Ícone do WhatsApp"></span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </article>
-
-                        <!-- DOCUMENTAÇÃO -->
-                        <article class="card" data-aos="fade-left">
-                            <div class="card-front">
-                                <img src="images-banner/banner-documentos.png" alt="Banner do serviço de documentação">
-                                <div class="card-content">
-                                    <span class="card-tag">Regularização</span>
-                                    <h3>Documentação</h3>
-                                    <p>Folha de pagamento, imposto de renda e regularização de empresas e imóveis.</p>
-                                    <div class="card-buttons">
-                                        <button class="btn btn-info" data-card="9" type="button">Mais
-                                            informações</button>
-                                        <a href="https://wa.me/5591999635260" target="_blank" rel="noopener noreferrer"
-                                            class="btn btn-whats">
-                                            Entre em contato
-                                            <span class="whatsapp-icon"><img src="images-icons/icons8-whatsapp-96.png"
-                                                    alt="Ícone do WhatsApp"></span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </article>
-
-                        <button class="slider-btn right-btn" aria-label="Avançar serviço">›</button>
-                    </div>
-
-                    <div id="sliderModal" class="slider-modal" aria-hidden="true" role="dialog"
-                        aria-label="Galeria de serviços">
-                        <div class="slider-content">
-                            <div class="slider-images"></div>
-                        </div>
-                        <a href="https://wa.me/5591999635260" target="_blank" rel="noopener noreferrer"
-                            class="btn btn-whats-slider">
-                            Entre em contato
-                            <span class="whatsapp-icon"><img src="images-icons/icons8-whatsapp-96.png"
-                                    alt="Ícone do WhatsApp"></span>
-                        </a>
-                        <button class="close-btn" type="button" aria-label="Fechar galeria">×</button>
-                        <button class="arrow left-arrow" type="button" aria-label="Imagem anterior">‹</button>
-                        <button class="arrow right-arrow" type="button" aria-label="Próxima imagem">›</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <div class="imovel-modal" aria-hidden="true">
-            <div class="imovel-modal-content">
-                <div class="imovel-slider">
-                    <button class="slider-arrow left" type="button" aria-label="Imagem anterior do imóvel">‹</button>
-                    <img id="sliderImage" alt="Imagem ampliada do imóvel">
-                    <button class="close-btn-imovel" type="button" aria-label="Fechar imóvel">×</button>
-                    <button class="slider-arrow right" type="button" aria-label="Próxima imagem do imóvel">›</button>
-                </div>
-
-                <div class="imovel-info">
-                    <span class="imovel-kicker">Catálogo imobiliário</span>
-                    <h3 id="imovelSubtitulo"></h3>
-                    <p id="imovelDescricao1"></p>
-                    <p id="imovelDescricao2"></p>
-                    <p id="imovelDescricao3"></p>
-
-                    <div class="imovel-buttons">
-                        <a href="https://gomeserosiane.com.br" target="_blank" rel="noopener noreferrer"
-                            class="btn btn-info-imovel-modal">
-                            Saiba mais
-                        </a>
-                        <a href="https://wa.me/5591999635260" target="_blank" rel="noopener noreferrer"
-                            class="btn btn-whats-imovel-modal">
-                            Entre em contato
-                            <span class="whatsapp-icon">
-                                <img src="images-icons/icons8-whatsapp-96.png" alt="Ícone do WhatsApp">
-                            </span>
-                        </a>
-                    </div>
-
-                    <button class="btn-indisponivel-modal" type="button">
-                        Imóvel alugado - Indisponível
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <section class="grupo-status" id="grupo-status">
-            <div class="section-shell">
-                <div class="section-heading section-heading-light" data-aos="fade-down">
-                    <span class="section-badge">Novidades</span>
-                    <h2>Veja as novidades do <span>Bougainville Belém</span> e das <span>Chácaras Florença</span></h2>
-                </div>
-
-                <div class="grupo-card">
-                    <img src="images-grupostatus/grupostatus.png" class="grupo-logo"
-                        alt="Marca do grupo responsável pelos empreendimentos">
-
-                    <br><br>
-
-                    <div class="grupo-conteudo">
-                        <div class="grupo-coluna">
-                            <img src="images-grupostatus/bougainville-belem.jpg" class="grupo-img"
-                                alt="Imagem do empreendimento Bougainville Belém">
-
-                            <div class="grupo-carousel">
-                                <div class="grupo-carousel-track1">
-                                    <img src="images-bougainville/bougainville-1.png"
-                                        alt="Bougainville Belém - ambiente 1">
-                                    <img src="images-bougainville/bougainville-2.png"
-                                        alt="Bougainville Belém - ambiente 2">
-                                    <img src="images-bougainville/bougainville-3.png"
-                                        alt="Bougainville Belém - ambiente 3">
-                                    <img src="images-bougainville/bougainville-4.png"
-                                        alt="Bougainville Belém - ambiente 4">
-                                    <img src="images-bougainville/bougainville-5.png"
-                                        alt="Bougainville Belém - ambiente 5">
-                                    <img src="images-bougainville/bougainville-6.png"
-                                        alt="Bougainville Belém - ambiente 6">
-                                    <img src="images-bougainville/bougainville-7.png"
-                                        alt="Bougainville Belém - ambiente 7">
-                                    <img src="images-bougainville/bougainville-8.png"
-                                        alt="Bougainville Belém - ambiente 8">
-                                </div>
-                            </div>
-
-                            <div class="grupo-carousel">
-                                <div class="grupo-carousel-track1">
-                                    <img src="images-bougainville/bougainville-9.png"
-                                        alt="Bougainville Belém - ambiente 9">
-                                    <img src="images-bougainville/bougainville-10.png"
-                                        alt="Bougainville Belém - ambiente 10">
-                                    <img src="images-bougainville/bougainville-11.png"
-                                        alt="Bougainville Belém - ambiente 11">
-                                    <img src="images-bougainville/bougainville-12.png"
-                                        alt="Bougainville Belém - ambiente 12">
-                                    <img src="images-bougainville/bougainville-13.png"
-                                        alt="Bougainville Belém - ambiente 13">
-                                    <img src="images-bougainville/bougainville-14.png"
-                                        alt="Bougainville Belém - ambiente 14">
-                                    <img src="images-bougainville/bougainville-15.png"
-                                        alt="Bougainville Belém - ambiente 15">
-                                    <img src="images-bougainville/bougainville-16.png"
-                                        alt="Bougainville Belém - ambiente 16">
-                                    <img src="images-bougainville/bougainville-17.png"
-                                        alt="Bougainville Belém - ambiente 17">
-                                </div>
-                            </div>
-
-                            <h3>Saiba mais informações no vídeo a seguir:</h3>
-                            <video src="src/video-bougainville.mp4" controls preload="metadata"></video>
-                        </div>
-
-                        <div class="grupo-divider" aria-hidden="true"></div>
-
-                        <div class="grupo-coluna">
-                            <img src="images-grupostatus/chacaras-florenca.jpg" class="grupo-img"
-                                alt="Imagem do empreendimento Chácaras Florença">
-
-                            <div class="grupo-carousel">
-                                <div class="grupo-carousel-track2">
-                                    <img src="images-chacara/01-academia.png" alt="Chácaras Florença - academia">
-                                    <img src="images-chacara/02-administracao.png"
-                                        alt="Chácaras Florença - administração">
-                                    <img src="images-chacara/03-brinquedoteca.png"
-                                        alt="Chácaras Florença - brinquedoteca">
-                                    <img src="images-chacara/04-cafe-bistro.png" alt="Chácaras Florença - café bistrô">
-                                    <img src="images-chacara/05-lavanderia.png" alt="Chácaras Florença - lavanderia">
-                                    <img src="images-chacara/06-coworking.png" alt="Chácaras Florença - coworking">
-                                    <img src="images-chacara/07-espaco-mulher.png"
-                                        alt="Chácaras Florença - espaço mulher">
-                                    <img src="images-chacara/08-salao-de-festas.png"
-                                        alt="Chácaras Florença - salão de festas">
-                                    <img src="images-chacara/09-salao-de-jogos.png"
-                                        alt="Chácaras Florença - salão de jogos">
-                                    <img src="images-chacara/10-spa.png" alt="Chácaras Florença - spa">
-                                    <img src="images-chacara/11-vestiario.png" alt="Chácaras Florença - vestiário">
-                                    <img src="images-chacara/12-campo-infantil.png"
-                                        alt="Chácaras Florença - campo infantil">
-                                    <img src="images-chacara/13-car-wash.png" alt="Chácaras Florença - car wash">
-                                    <img src="images-chacara/14-churrasqueira-tipo1.png"
-                                        alt="Chácaras Florença - churrasqueira tipo 1">
-                                    <img src="images-chacara/15-churrasqueira-tipo2.png"
-                                        alt="Chácaras Florença - churrasqueira tipo 2">
-                                </div>
-                            </div>
-
-                            <div class="grupo-carousel">
-                                <div class="grupo-carousel-track2">
-                                    <img src="images-chacara/16-bike.png" alt="Chácaras Florença - bike">
-                                    <img src="images-chacara/17-ponto-carregamento-carro-eletrico.png"
-                                        alt="Chácaras Florença - carregamento para carro elétrico">
-                                    <img src="images-chacara/18-predio-multiuso.png"
-                                        alt="Chácaras Florença - prédio multiuso 1">
-                                    <img src="images-chacara/19-predio-multiuso.png"
-                                        alt="Chácaras Florença - prédio multiuso 2">
-                                    <img src="images-chacara/20-geral.png" alt="Chácaras Florença - vista geral">
-                                    <img src="images-chacara/21-portaria.png" alt="Chácaras Florença - portaria">
-                                    <img src="images-chacara/22-implantacao.png" alt="Chácaras Florença - implantação">
-                                    <img src="images-chacara/23-lazer-geral.png" alt="Chácaras Florença - lazer geral">
-                                    <img src="images-chacara/24-petplace.png" alt="Chácaras Florença - pet place">
-                                    <img src="images-chacara/25-piscina.png" alt="Chácaras Florença - piscina 1">
-                                    <img src="images-chacara/26-piscina.png" alt="Chácaras Florença - piscina 2">
-                                    <img src="images-chacara/27-piscina-infantil.png"
-                                        alt="Chácaras Florença - piscina infantil">
-                                    <img src="images-chacara/28-playground.png" alt="Chácaras Florença - playground">
-                                    <img src="images-chacara/29-beach-tennis.png"
-                                        alt="Chácaras Florença - beach tennis">
-                                    <img src="images-chacara/30-quadra-poliesportiva.png"
-                                        alt="Chácaras Florença - quadra poliesportiva">
-                                </div>
-                            </div>
-
-                            <h3>Saiba mais informações no vídeo a seguir:</h3>
-                            <video src="src/video-chacarasflorenca.mp4" controls preload="metadata"></video>
-                        </div>
-                    </div>
-
-                    <div class="grupo-botoes">
-                        <a href="https://wa.me/5591999635260" class="btn verde" target="_blank"
-                            rel="noopener noreferrer">
-                            Fale com o corretor
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="outros-servicos section-shell">
-            <div class="section-heading" data-aos="fade-down">
-                <span class="section-badge">Planos de saúde</span>
-                <h2>Conheça mais sobre nossos planos de saúde</h2>
-            </div>
-
-            <div class="card-servico" data-aos="zoom-in">
-                <img src="images-banner/banner - help.png" class="img-luck" alt="Banner do associado Luck Card">
-                <div class="card-servico-copy">
-                    <span class="card-tag">Cartão de benefícios</span>
-                    <h3>Associado Luck Card</h3>
-                    <p>
-                        Conheça as vantagens de ser Luck Card. Clique em “Mais informações” para abrir a galeria com
-                        detalhes e
-                        benefícios, ou fale com a equipe pelo WhatsApp.
-                    </p>
-
-                    <div class="botoes-card">
-                        <button class="btn-info-outros" data-card="0" type="button">Mais informações</button>
-                        <a href="https://wa.me/5591999635260" target="_blank" rel="noopener noreferrer"
-                            class="btn-whats-outros">
-                            Entre em contato
-                            <span class="whatsapp-icon-outros"><img src="images-icons/icons8-whatsapp-96.png"
-                                    alt="Ícone do WhatsApp"></span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div id="sliderModalOutros" class="slider-modal-outros" aria-hidden="true">
-                <div class="slider-content-outros">
-                    <div class="slider-images-outros"></div>
-                </div>
-                <button class="close-btn-outros" type="button" aria-label="Fechar galeria">×</button>
-                <button class="arrow left-arrow-outros" type="button" aria-label="Imagem anterior">‹</button>
-                <button class="arrow right-arrow-outros" type="button" aria-label="Próxima imagem">›</button>
-            </div>
-
-            <div class="card-servico card-servico-select" data-aos="zoom-in">
-                <img src="images-banner/banner-1-select.jpeg" class="img-select"
-                    alt="Banner 1 do plano de saúde Select">
-                <div class="card-servico-copy">
-                    <span class="card-tag">Plano Select</span>
-                    <h3>Benefícios do plano</h3>
-                    <ul class="beneficios-lista">
-                        <li>Desconto de até 10% para clientes oriundos de outros planos</li>
-                        <li>Desconto de 5% para clientes novos</li>
-                        <li>Isenção de carência para consultas e exames simples</li>
-                        <li>Teleconsulta gratuita</li>
-                        <li>Rede credenciada ampla no Pará</li>
-                        <li>Atendimento nacional e muito mais</li>
-                    </ul>
-
-                    <br><br>
-
-                    <img src="images-banner/banner-2-select.jpeg" alt="Banner 2 do plano de saúde Select"
-                        class="select-extra">
-
-                    <br><br><br>
-
-                    <h3 style="text-align: center;">Plano de saúde Select</h3>
-                    <p style="text-align: center;">
-                        Assista ao vídeo explicativo abaixo para entender os detalhes e benefícios deste plano.
-                    </p>
-
-                    <div class="video-container">
-                        <video src="src/video-select-plano-saude.mp4" controls preload="metadata"></video>
-                    </div>
-
-                    <a href="https://wa.me/5591999635260" target="_blank" rel="noopener noreferrer"
-                        class="btn-whats-outros full-width">
-                        Entre em contato
-                        <span class="whatsapp-icon-outros"><img src="images-icons/icons8-whatsapp-96.png"
-                                alt="Ícone do WhatsApp"></span>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <section class="parceiros">
-            <div class="section-heading" data-aos="fade-down">
-                <span class="section-badge">Credibilidade</span>
-                <h2>Nossos parceiros</h2>
-            </div>
-
-            <div class="carousel-row top">
-                <div class="carousel-track">
-                    <img src="images-carousel/carousel-previsul.jpg" alt="Logo Previsul">
-                    <img src="images-carousel/carousel-suhai.jpg" alt="Logo Suhai">
-                    <img src="images-carousel/carousel-capemisa.jpg" alt="Logo Capemisa">
-                    <img src="images-carousel/carousel-select.png" alt="Logo Select">
-                    <img src="images-carousel/carousel-metlife.jpg" alt="Logo MetLife">
-                    <img src="images-carousel/carousel-luck-card.png" alt="Logo Luck Card">
-                    <img src="images-carousel/carousel-previsul.jpg" alt="Logo Previsul repetida">
-                    <img src="images-carousel/carousel-suhai.jpg" alt="Logo Suhai repetida">
-                    <img src="images-carousel/carousel-capemisa.jpg" alt="Logo Capemisa repetida">
-                    <img src="images-carousel/carousel-select.png" alt="Logo Select repetida">
-                    <img src="images-carousel/carousel-metlife.jpg" alt="Logo MetLife repetida">
-                    <img src="images-carousel/carousel-luck-card.png" alt="Logo Luck Card repetida">
-                </div>
-            </div>
-
-            <div class="carousel-row bottom">
-                <div class="carousel-track">
-                    <img src="images-carousel/carousel-invest.jpg" alt="Logo Invest">
-                    <img src="images-carousel/carousel-hapvida.jpg" alt="Logo Hapvida">
-                    <img src="images-carousel/carousel-mapfre.jpg" alt="Logo Mapfre">
-                    <img src="images-carousel/carousel-axa.jpg" alt="Logo AXA">
-                    <img src="images-carousel/carousel-rodobens.jpg" alt="Logo Rodobens">
-                    <img src="images-carousel/carousel-oral-blue.png" alt="Logo Oral Blue">
-                    <img src="images-carousel/carousel-invest.jpg" alt="Logo Invest repetida">
-                    <img src="images-carousel/carousel-hapvida.jpg" alt="Logo Hapvida repetida">
-                    <img src="images-carousel/carousel-mapfre.jpg" alt="Logo Mapfre repetida">
-                    <img src="images-carousel/carousel-axa.jpg" alt="Logo AXA repetida">
-                    <img src="images-carousel/carousel-rodobens.jpg" alt="Logo Rodobens repetida">
-                    <img src="images-carousel/carousel-oral-blue.png" alt="Logo Oral Blue repetida">
-                </div>
-            </div>
-        </section>
-
-        <section id="contato" class="contato section-shell">
-            <div class="contato-copy" data-aos="fade-right">
-                <span class="section-badge">Contato</span>
-                <h2>Entre em contato</h2>
-                <p>Preencha o formulário e fale diretamente conosco pelo WhatsApp.</p>
-                <img src="images-banner/logo-2.png" alt="Logomarca institucional do Grupo Gomes & Rosiane">
-
-                <div class="contato-info">
-                    <div>
-                        <strong>Telefone</strong>
-                        <span>(91) 99963-5260</span>
-                    </div>
-                    <div>
-                        <strong>Horário</strong>
-                        <span>Segunda à Sexta, das 08h30 às 17h00</span>
-                    </div>
-                    <div>
-                        <strong>Endereço</strong>
-                        <span>Travessa Vileta, 1414, Belém - PA, 66087-421</span>
-                    </div>
-                </div>
-            </div>
-
-            <form id="whatsappForm" class="contact-card" data-aos="fade-left">
-                <div class="campo">
-                    <label for="nome">Nome:</label>
-                    <input type="text" id="nome" name="nome" placeholder="Seu nome e sobrenome" autocomplete="name"
-                        required>
-                </div>
-
-                <div class="campo">
-                    <label for="email">E-mail:</label>
-                    <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" autocomplete="email"
-                        required>
-                </div>
-
-                <div class="campo">
-                    <label for="whatsapp">WhatsApp:</label>
-                    <input type="tel" id="whatsapp" name="whatsapp" placeholder="(00) 00000-0000" autocomplete="tel"
-                        required>
-                </div>
-
-                <div class="campo">
-                    <label for="assunto">Assunto:</label>
-                    <textarea id="assunto" name="assunto" rows="4" placeholder="Digite aqui o assunto..."
-                        required></textarea>
-                </div>
-
-                <button type="submit" class="btn-enviar">Enviar pelo WhatsApp</button>
-            </form>
-        </section>
-    </main>
-
-    <footer>
-        <div class="rodape">
-            <div class="col" data-aos="fade-right">
-                <h3>Grupo Gomes & Rosiane</h3>
-                <p>
-                    Grupo especializado em serviços médicos, planos funerários, seguros,
-                    certificados digitais, mobilidade urbana, imóveis, planos de saúde e odontológicos,
-                    ótica, serviços contábeis e documentação.
-                </p>
-            </div>
-
-            <div class="col" data-aos="fade-down">
-                <h3>Navegue</h3>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#sobre">Sobre</a></li>
-                    <li><a href="#servicos">Serviços</a></li>
-                    <li><a href="#grupo-status">Novidades</a></li>
-                    <li><a href="#contato">Contato</a></li>
-                </ul>
-            </div>
-
-            <div class="col" data-aos="fade-left">
-                <h3>Informações</h3>
-                <p>Telefone: (91) 99963-5260</p>
-                <p>Horário de funcionamento: Seg. à Sex. - 08h30 às 17h00</p>
-                <p>Travessa Vileta, 1414, Belém - PA, 66087-421</p>
-            </div>
-        </div>
-
-        <div class="copy">
-            © 2026 - Grupo Gomes & Rosiane. Todos os direitos reservados.<br>
-            Desenvolvido por <span>Reginaldo Lima</span>.
-        </div>
-    </footer>
-
-    <div class="whatsapp-container">
-        <a href="https://wa.me/5591999635260" target="_blank" rel="noopener noreferrer"
-            aria-label="Conversar no WhatsApp">
-            <img src="images-icons/icons8-whatsapp-96.png" alt="Botão flutuante do WhatsApp">
-        </a>
+      </div>
+      <div>
+        <h3>Informações</h3>
+        <p>Telefone: (91) 99963-5260</p>
+        <p>Horário de funcionamento: Seg. à Sex. - 08h30 às 17h00</p>
+        <p>Travessa Vileta, 1414, Belém - PA, 66087-421</p>
+      </div>
     </div>
+    <div class="container footer-bottom">
+      <p>© 2026 - Grupo Gomes & Rosiane. Todos os direitos reservados.</p>
+      <p>Desenvolvido por Reginaldo Lima.</p>
+    </div>
+  </footer>
 
-    <script src="js/script.js?v=20260330"></script>
-    <script src="js/slider-wrapper.js?v=20260330"></script>
-    <script src="js/slider-servicos.js?v=20260330"></script>
-    <script src="js/imoveis.js?v=20260330"></script>
-    <script src="js/formulario-contato.js?v=20260330"></script>
-    <script src="js/outros-servicos.js?v=20260330"></script>
-    <script src="js/menu-mobile.js?v=20260330"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="js/aos.js?v=20260330"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/imobiliaria.js"></script>
+  <script src="js/blog.js"></script>
+  <script src="js/main.js"></script>
 </body>
-
 </html>
+
+

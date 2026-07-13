@@ -1,0 +1,11 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 180" role="img" aria-labelledby="title">
+  <title id="title">Gomes Digital</title>
+  <rect width="320" height="180" rx="16" fill="#ffffff"/>
+  <rect x="38" y="52" width="92" height="82" rx="14" fill="#e8f6fc" stroke="#1265FE" stroke-width="8"/>
+  <path d="M60 82h48M60 105h34" stroke="#1265FE" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="112" cy="124" r="10" fill="#1265FE"/>
+  <text x="150" y="82" fill="#18324a" font-family="Arial, sans-serif" font-size="28" font-weight="800">Gomes</text>
+  <text x="150" y="116" fill="#1265FE" font-family="Arial, sans-serif" font-size="24" font-weight="700">Digital</text>
+</svg>
+
+

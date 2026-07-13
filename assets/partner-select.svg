@@ -1,0 +1,7 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 100">
+  <rect width="260" height="100" rx="12" fill="#ffffff"/>
+  <rect x="34" y="28" width="52" height="44" rx="10" fill="#e8f6fc" stroke="#1265FE" stroke-width="6"/>
+  <text x="104" y="59" fill="#18324a" font-family="Arial, sans-serif" font-size="30" font-weight="800">Select</text>
+</svg>
+
+
