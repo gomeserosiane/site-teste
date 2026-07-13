@@ -127,6 +127,40 @@ textarea {
   background: var(--danger);
 }
 
+.floating-whatsapp {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 90;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 62px;
+  height: 62px;
+  color: #fff;
+  background: #25d366;
+  border-radius: 50%;
+  box-shadow: 0 16px 34px rgba(37, 211, 102, 0.38);
+  transition: transform 0.22s ease, box-shadow 0.22s ease, background 0.22s ease;
+}
+
+.floating-whatsapp:hover {
+  background: #1fb45b;
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 20px 40px rgba(37, 211, 102, 0.45);
+}
+
+.floating-whatsapp:focus-visible {
+  outline: 3px solid rgba(18, 101, 254, 0.35);
+  outline-offset: 4px;
+}
+
+.floating-whatsapp svg {
+  width: 34px;
+  height: 34px;
+  fill: currentColor;
+}
+
 .hidden {
   display: none !important;
 }
@@ -156,7 +190,6 @@ textarea {
   margin: 0 0 10px;
   color: #dfdfdf;
   line-height: 1.65;
-  font-weight: 600;
 }
 
 .footer-nav a:hover {
@@ -179,7 +212,5 @@ textarea {
   text-align: center;
   margin: 0 0 8px;
   color: #dfdfdf;
-  font-weight: 700;
 }
-
 

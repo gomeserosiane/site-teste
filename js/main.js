@@ -28,41 +28,106 @@ const App = (() => {
   const serviceDetails = [
     {
       category: "Saúde",
-      title: "Consultas e planos",
+      title: "Consultas médicas",
       intro: "Uma frente voltada para orientar famílias, profissionais e empresas na contratação de soluções de saúde com mais clareza e segurança.",
       text: "O atendimento começa com a identificação da necessidade do cliente, perfil de uso, faixa de investimento e urgência. A partir disso, o Grupo Gomes & Rosiane apresenta alternativas de consultas, planos de saúde, odontológicos e cartões de benefícios, explicando coberturas, diferenciais e próximos passos de contratação.",
       benefits: "Mais praticidade para comparar opções, atendimento direto pelo WhatsApp, orientação antes da contratação e suporte para escolher uma solução alinhada à rotina da família ou da empresa.",
       items: ["Famílias que buscam atendimento médico recorrente", "Empresas que desejam benefícios para colaboradores", "Clientes que precisam de orientação antes de contratar um plano"],
       images: [
-        "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1100&q=80",
-        "https://images.unsplash.com/photo-1580281658629-9b93f18ae9ae?auto=format&fit=crop&w=1100&q=80",
-        "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=1100&q=80"
+        "images-slider/slider-consultas.png",
+        "images-slider/slider-consultas1.png",
+        "images-slider/slider-consultas2.png",
+        "images-slider/slider-consultas3.png"
       ]
     },
     {
-      category: "Proteção",
-      title: "Seguros e planos funerários",
+      category: "Saúde familiar e corporativa",
+      title: "Planos de Saúde e Odontológicos",
       intro: "Soluções para proteger patrimônio, família e rotina empresarial com uma análise simples, objetiva e responsável.",
       text: "A consultoria avalia o tipo de proteção desejada, os riscos mais importantes e o perfil de cobertura ideal. O cliente recebe orientação sobre seguros de vida, automóvel, residência, empresa e planos funerários, com explicação clara sobre benefícios, limites e documentos necessários.",
       benefits: "Redução de incertezas, melhor entendimento das coberturas, indicação de opções adequadas ao perfil do cliente e atendimento consultivo antes da contratação.",
       items: ["Famílias que desejam proteção financeira", "Proprietários de veículos e imóveis", "Empresas que precisam reduzir riscos operacionais"],
       images: [
-        "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1100&q=80",
-        "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=1100&q=80",
-        "https://images.unsplash.com/photo-1560472355-536de3962603?auto=format&fit=crop&w=1100&q=80"
+        "images-slider/slider-planos.png",
+        "images-slider/slider-planos1.png"
       ]
     },
     {
-      category: "Imobiliário",
-      title: "Imóveis e regularização",
+      category: "Seguros",
+      title: "Seguros",
       intro: "Atendimento imobiliário para compra, venda, aluguel, avaliação e regularização com mais segurança documental.",
       text: "A equipe acompanha o cliente na análise do imóvel, organização de documentos, avaliação de oportunidades e encaminhamento de processos de legalização. O objetivo é tornar cada etapa mais clara, reduzindo burocracias e facilitando decisões patrimoniais.",
       benefits: "Mais segurança na negociação, acompanhamento consultivo, organização documental e suporte para evitar atrasos em processos de compra, venda, aluguel ou regularização.",
       items: ["Quem deseja vender ou comprar imóvel", "Proprietários que precisam regularizar documentação", "Clientes que buscam avaliação e administração imobiliária"],
       images: [
-        "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1100&q=80",
-        "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1100&q=80",
-        "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1100&q=80"
+        "images-slider/slider-seguros.png",
+        "images-slider/slider-seguros1.png",
+        "images-slider/slider-seguros2.png"
+      ]
+    },
+    {
+      category: "Mobilidade",
+      title: "Seguros para Motoristas",
+      intro: "Suporte para empresas e profissionais que precisam de organização contábil, certificados digitais e documentação em dia.",
+      text: "A frente empresarial atua em abertura de empresas, certificados digitais, folha de pagamento, regularizações e documentação. O processo foi pensado para simplificar demandas administrativas e ajudar o cliente a manter sua operação mais organizada.",
+      benefits: "Atendimento centralizado, orientação sobre documentos, mais agilidade em processos empresariais e suporte para manter obrigações administrativas sob controle.",
+      items: ["Empreendedores em fase de abertura de empresa", "Empresas que precisam de certificado digital", "Negócios que buscam suporte contábil e documental"],
+      images: [
+        "images-slider/slider-seguro-motorista.png",
+        "images-slider/slider-seguro-motorista2.png",
+        "images-slider/slider-seguro-motorista3.png",
+        "images-slider/slider-seguro-motorista4.png",
+        "images-slider/slider-seguro-motorista5.png",
+        "images-slider/slider-seguro-motorista6.png"
+      ]
+    },
+    {
+      category: "Proteção",
+      title: "Planos funerários",
+      intro: "Suporte para empresas e profissionais que precisam de organização contábil, certificados digitais e documentação em dia.",
+      text: "A frente empresarial atua em abertura de empresas, certificados digitais, folha de pagamento, regularizações e documentação. O processo foi pensado para simplificar demandas administrativas e ajudar o cliente a manter sua operação mais organizada.",
+      benefits: "Atendimento centralizado, orientação sobre documentos, mais agilidade em processos empresariais e suporte para manter obrigações administrativas sob controle.",
+      items: ["Empreendedores em fase de abertura de empresa", "Empresas que precisam de certificado digital", "Negócios que buscam suporte contábil e documental"],
+      images: [
+        "images-slider/slider-funeraria.png",
+        "images-slider/slider-funeraria2.png",
+        "images-slider/slider-funeraria3.png",
+        "images-slider/slider-funeraria4.png"
+      ]
+    },
+    {
+      category: "Ótica",
+      title: "Ótica",
+      intro: "Suporte para empresas e profissionais que precisam de organização contábil, certificados digitais e documentação em dia.",
+      text: "A frente empresarial atua em abertura de empresas, certificados digitais, folha de pagamento, regularizações e documentação. O processo foi pensado para simplificar demandas administrativas e ajudar o cliente a manter sua operação mais organizada.",
+      benefits: "Atendimento centralizado, orientação sobre documentos, mais agilidade em processos empresariais e suporte para manter obrigações administrativas sob controle.",
+      items: ["Empreendedores em fase de abertura de empresa", "Empresas que precisam de certificado digital", "Negócios que buscam suporte contábil e documental"],
+      images: [
+        "images-slider/slider-otica.png"
+      ]
+    },
+    {
+      category: "Imobiliário",
+      title: "Serviços Imobiliários",
+      intro: "Suporte para empresas e profissionais que precisam de organização contábil, certificados digitais e documentação em dia.",
+      text: "A frente empresarial atua em abertura de empresas, certificados digitais, folha de pagamento, regularizações e documentação. O processo foi pensado para simplificar demandas administrativas e ajudar o cliente a manter sua operação mais organizada.",
+      benefits: "Atendimento centralizado, orientação sobre documentos, mais agilidade em processos empresariais e suporte para manter obrigações administrativas sob controle.",
+      items: ["Empreendedores em fase de abertura de empresa", "Empresas que precisam de certificado digital", "Negócios que buscam suporte contábil e documental"],
+      images: [
+        "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1100&q=80",
+        "https://images.unsplash.com/photo-1554224154-26032ffc0d07?auto=format&fit=crop&w=1100&q=80",
+        "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1100&q=80"
+      ]
+    },
+    {
+      category: "Certificados Digitais",
+      title: "Certificados Digitais",
+      intro: "Suporte para empresas e profissionais que precisam de organização contábil, certificados digitais e documentação em dia.",
+      text: "A frente empresarial atua em abertura de empresas, certificados digitais, folha de pagamento, regularizações e documentação. O processo foi pensado para simplificar demandas administrativas e ajudar o cliente a manter sua operação mais organizada.",
+      benefits: "Atendimento centralizado, orientação sobre documentos, mais agilidade em processos empresariais e suporte para manter obrigações administrativas sob controle.",
+      items: ["Empreendedores em fase de abertura de empresa", "Empresas que precisam de certificado digital", "Negócios que buscam suporte contábil e documental"],
+      images: [
+        "images-slider/slider-certificados.png"
       ]
     },
     {
@@ -73,9 +138,14 @@ const App = (() => {
       benefits: "Atendimento centralizado, orientação sobre documentos, mais agilidade em processos empresariais e suporte para manter obrigações administrativas sob controle.",
       items: ["Empreendedores em fase de abertura de empresa", "Empresas que precisam de certificado digital", "Negócios que buscam suporte contábil e documental"],
       images: [
-        "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1100&q=80",
-        "https://images.unsplash.com/photo-1554224154-26032ffc0d07?auto=format&fit=crop&w=1100&q=80",
-        "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1100&q=80"
+        "images-slider/slider-contabilidade.png",
+        "images-slider/slider-contabilidade2.png",
+        "images-slider/slider-contabilidade3.png",
+        "images-slider/slider-contabilidade4.png",
+        "images-slider/slider-documentos.png",
+        "images-slider/slider-documentos2.png",
+        "images-slider/slider-documentos3.png",
+        "images-slider/slider-documentos4.png"
       ]
     }
   ];

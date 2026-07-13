@@ -183,6 +183,18 @@
   .property-lightbox-frame {
     width: 94vw;
   }
+
+  .floating-whatsapp {
+    right: 16px;
+    bottom: 16px;
+    width: 54px;
+    height: 54px;
+  }
+
+  .floating-whatsapp svg {
+    width: 30px;
+    height: 30px;
+  }
 }
 
 @media (max-width: 480px) {
