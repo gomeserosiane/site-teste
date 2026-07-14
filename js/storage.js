@@ -213,7 +213,7 @@ const PropertyStorage = (() => {
       address: "Travessa Vileta, 1414",
       neighborhood: "Marco",
       city: "Belém - PA",
-      learn_more_url: "https://gomeserosiane.com.br",
+      learn_more_url: "https://site-teste-mauve.vercel.app",
       images: [
         "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=80",
         "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1000&q=80",
@@ -228,7 +228,7 @@ const PropertyStorage = (() => {
       address: "Av. Almirante Barroso, 2200",
       neighborhood: "Souza",
       city: "Belém - PA",
-      learn_more_url: "https://gomeserosiane.com.br",
+      learn_more_url: "https://site-teste-mauve.vercel.app",
       images: [
         "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1000&q=80",
         "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1000&q=80",
@@ -243,7 +243,7 @@ const PropertyStorage = (() => {
       address: "Rua dos Mundurucus, 900",
       neighborhood: "Batista Campos",
       city: "Belém - PA",
-      learn_more_url: "https://gomeserosiane.com.br",
+      learn_more_url: "https://site-teste-mauve.vercel.app",
       images: [
         "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1000&q=80",
         "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1000&q=80",

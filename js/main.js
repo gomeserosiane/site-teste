@@ -29,10 +29,10 @@ const App = (() => {
     {
       category: "Saúde",
       title: "Consultas médicas",
-      intro: "Uma frente voltada para orientar famílias, profissionais e empresas na contratação de soluções de saúde com mais clareza e segurança.",
-      text: "O atendimento começa com a identificação da necessidade do cliente, perfil de uso, faixa de investimento e urgência. A partir disso, o Grupo Gomes & Rosiane apresenta alternativas de consultas, planos de saúde, odontológicos e cartões de benefícios, explicando coberturas, diferenciais e próximos passos de contratação.",
-      benefits: "Mais praticidade para comparar opções, atendimento direto pelo WhatsApp, orientação antes da contratação e suporte para escolher uma solução alinhada à rotina da família ou da empresa.",
-      items: ["Famílias que buscam atendimento médico recorrente", "Empresas que desejam benefícios para colaboradores", "Clientes que precisam de orientação antes de contratar um plano"],
+      intro: "Atendimento pensado para facilitar o acesso a consultas e orientações de saúde com agilidade, clareza e acolhimento.",
+      text: "O atendimento começa pelo entendimento da necessidade do cliente, especialidade desejada e urgência do caso. A partir dessas informações, a equipe orienta sobre as possibilidades de consulta, disponibilidade de atendimento e próximos passos para que o cliente tenha uma experiência mais organizada.",
+      benefits: "Mais praticidade para buscar atendimento, orientação antes do agendamento, comunicação direta pelo WhatsApp e apoio para encontrar uma alternativa compatível com a rotina da família.",
+      items: ["Famílias que precisam de consultas recorrentes", "Clientes que buscam orientação inicial de saúde", "Pessoas que desejam atendimento prático e bem direcionado"],
       images: [
         "images-slider/slider-consultas.png",
         "images-slider/slider-consultas1.png",
@@ -43,10 +43,10 @@ const App = (() => {
     {
       category: "Saúde familiar e corporativa",
       title: "Planos de Saúde e Odontológicos",
-      intro: "Soluções para proteger patrimônio, família e rotina empresarial com uma análise simples, objetiva e responsável.",
-      text: "A consultoria avalia o tipo de proteção desejada, os riscos mais importantes e o perfil de cobertura ideal. O cliente recebe orientação sobre seguros de vida, automóvel, residência, empresa e planos funerários, com explicação clara sobre benefícios, limites e documentos necessários.",
-      benefits: "Redução de incertezas, melhor entendimento das coberturas, indicação de opções adequadas ao perfil do cliente e atendimento consultivo antes da contratação.",
-      items: ["Famílias que desejam proteção financeira", "Proprietários de veículos e imóveis", "Empresas que precisam reduzir riscos operacionais"],
+      intro: "Soluções para quem deseja cuidar da saúde com previsibilidade, acesso facilitado e orientação na escolha do plano mais adequado.",
+      text: "A consultoria avalia perfil familiar ou corporativo, quantidade de usuários, necessidade de cobertura médica ou odontológica e faixa de investimento. Com base nisso, o Grupo Gomes & Rosiane apresenta opções disponíveis, explica benefícios, limitações, carências e documentos necessários para contratação.",
+      benefits: "O cliente recebe apoio para comparar alternativas, entender as condições de cada plano e escolher uma solução compatível com sua realidade, evitando contratações apressadas ou mal compreendidas.",
+      items: ["Famílias que desejam assistência médica e odontológica", "Empresas que buscam benefícios para colaboradores", "Profissionais autônomos que precisam de cobertura organizada"],
       images: [
         "images-slider/slider-planos.png",
         "images-slider/slider-planos1.png"
@@ -55,10 +55,10 @@ const App = (() => {
     {
       category: "Seguros",
       title: "Seguros",
-      intro: "Atendimento imobiliário para compra, venda, aluguel, avaliação e regularização com mais segurança documental.",
-      text: "A equipe acompanha o cliente na análise do imóvel, organização de documentos, avaliação de oportunidades e encaminhamento de processos de legalização. O objetivo é tornar cada etapa mais clara, reduzindo burocracias e facilitando decisões patrimoniais.",
-      benefits: "Mais segurança na negociação, acompanhamento consultivo, organização documental e suporte para evitar atrasos em processos de compra, venda, aluguel ou regularização.",
-      items: ["Quem deseja vender ou comprar imóvel", "Proprietários que precisam regularizar documentação", "Clientes que buscam avaliação e administração imobiliária"],
+      intro: "Consultoria para proteger patrimônio, renda, família e rotina empresarial com coberturas alinhadas ao perfil de cada cliente.",
+      text: "A equipe identifica o tipo de risco que precisa ser protegido, analisa informações básicas do cliente e orienta sobre modalidades como seguro de vida, automotivo, residencial e empresarial. O objetivo é tornar a contratação mais clara, explicando coberturas, assistências, limites e documentação.",
+      benefits: "Mais segurança para decidir, melhor compreensão das coberturas contratadas, atendimento próximo e indicação de alternativas que respeitam necessidade, orçamento e objetivo de proteção.",
+      items: ["Famílias que buscam proteção financeira", "Proprietários de veículos e imóveis", "Empresas que desejam reduzir riscos operacionais"],
       images: [
         "images-slider/slider-seguros.png",
         "images-slider/slider-seguros1.png",
@@ -68,10 +68,10 @@ const App = (() => {
     {
       category: "Mobilidade",
       title: "Seguros para Motoristas",
-      intro: "Suporte para empresas e profissionais que precisam de organização contábil, certificados digitais e documentação em dia.",
-      text: "A frente empresarial atua em abertura de empresas, certificados digitais, folha de pagamento, regularizações e documentação. O processo foi pensado para simplificar demandas administrativas e ajudar o cliente a manter sua operação mais organizada.",
-      benefits: "Atendimento centralizado, orientação sobre documentos, mais agilidade em processos empresariais e suporte para manter obrigações administrativas sob controle.",
-      items: ["Empreendedores em fase de abertura de empresa", "Empresas que precisam de certificado digital", "Negócios que buscam suporte contábil e documental"],
+      intro: "Proteção voltada para profissionais que dependem do veículo para trabalhar e precisam manter sua operação com mais tranquilidade.",
+      text: "O atendimento considera o perfil do motorista, tipo de veículo, forma de uso e rotina de trabalho. A partir disso, são apresentadas alternativas para taxistas, mototaxistas, motoristas de aplicativo e profissionais de transporte que precisam de suporte em situações de imprevisto.",
+      benefits: "Mais segurança para a rotina de trabalho, orientação sobre coberturas úteis para mobilidade urbana e apoio para contratar uma solução compatível com o uso profissional do veículo.",
+      items: ["Taxistas e mototaxistas", "Motoristas de aplicativo", "Profissionais que utilizam veículo como ferramenta de trabalho"],
       images: [
         "images-slider/slider-seguro-motorista.png",
         "images-slider/slider-seguro-motorista2.png",
@@ -84,10 +84,10 @@ const App = (() => {
     {
       category: "Proteção",
       title: "Planos funerários",
-      intro: "Suporte para empresas e profissionais que precisam de organização contábil, certificados digitais e documentação em dia.",
-      text: "A frente empresarial atua em abertura de empresas, certificados digitais, folha de pagamento, regularizações e documentação. O processo foi pensado para simplificar demandas administrativas e ajudar o cliente a manter sua operação mais organizada.",
-      benefits: "Atendimento centralizado, orientação sobre documentos, mais agilidade em processos empresariais e suporte para manter obrigações administrativas sob controle.",
-      items: ["Empreendedores em fase de abertura de empresa", "Empresas que precisam de certificado digital", "Negócios que buscam suporte contábil e documental"],
+      intro: "Assistência funerária para famílias que desejam planejamento, acolhimento e suporte em momentos sensíveis.",
+      text: "A equipe orienta sobre opções de plano, cobertura familiar ou individual, condições de atendimento e benefícios incluídos. O objetivo é ajudar o cliente a se planejar com responsabilidade, evitando decisões urgentes em momentos delicados.",
+      benefits: "Mais previsibilidade para a família, atendimento humanizado, orientação clara sobre cobertura e suporte para contratar uma assistência adequada às necessidades do cliente.",
+      items: ["Famílias que desejam planejamento preventivo", "Clientes que buscam assistência individual", "Empresas que desejam oferecer benefício de proteção familiar"],
       images: [
         "images-slider/slider-funeraria.png",
         "images-slider/slider-funeraria2.png",
@@ -98,10 +98,10 @@ const App = (() => {
     {
       category: "Ótica",
       title: "Ótica",
-      intro: "Suporte para empresas e profissionais que precisam de organização contábil, certificados digitais e documentação em dia.",
-      text: "A frente empresarial atua em abertura de empresas, certificados digitais, folha de pagamento, regularizações e documentação. O processo foi pensado para simplificar demandas administrativas e ajudar o cliente a manter sua operação mais organizada.",
-      benefits: "Atendimento centralizado, orientação sobre documentos, mais agilidade em processos empresariais e suporte para manter obrigações administrativas sob controle.",
-      items: ["Empreendedores em fase de abertura de empresa", "Empresas que precisam de certificado digital", "Negócios que buscam suporte contábil e documental"],
+      intro: "Soluções ópticas para quem busca conforto visual, boa escolha de armações e orientação na compra de lentes.",
+      text: "O atendimento auxilia o cliente na escolha de armações, óculos de grau, óculos de sol e lentes de contato, considerando estilo, rotina, necessidade visual e conforto no uso diário. A proposta é unir estética, funcionalidade e acompanhamento próximo.",
+      benefits: "Mais segurança na escolha dos produtos, orientação personalizada, variedade de soluções e atendimento voltado para o uso real do cliente no trabalho, estudo e lazer.",
+      items: ["Clientes que precisam de óculos de grau", "Pessoas que buscam óculos de sol ou lentes de contato", "Quem deseja orientação para escolher armações adequadas"],
       images: [
         "images-slider/slider-otica.png"
       ]
@@ -109,23 +109,21 @@ const App = (() => {
     {
       category: "Imobiliário",
       title: "Serviços Imobiliários",
-      intro: "Suporte para empresas e profissionais que precisam de organização contábil, certificados digitais e documentação em dia.",
-      text: "A frente empresarial atua em abertura de empresas, certificados digitais, folha de pagamento, regularizações e documentação. O processo foi pensado para simplificar demandas administrativas e ajudar o cliente a manter sua operação mais organizada.",
-      benefits: "Atendimento centralizado, orientação sobre documentos, mais agilidade em processos empresariais e suporte para manter obrigações administrativas sob controle.",
-      items: ["Empreendedores em fase de abertura de empresa", "Empresas que precisam de certificado digital", "Negócios que buscam suporte contábil e documental"],
+      intro: "Atendimento imobiliário para venda, aluguel, administração, avaliação e regularização de imóveis com mais segurança documental.",
+      text: "A equipe acompanha o cliente na análise do imóvel, organização de documentos, avaliação de oportunidades e encaminhamento de processos de legalização. O objetivo é tornar cada etapa mais clara, reduzindo burocracias e facilitando decisões patrimoniais.",
+      benefits: "Mais segurança na negociação, acompanhamento consultivo, organização documental e suporte para evitar atrasos em processos de compra, venda, aluguel ou regularização.",
+      items: ["Quem deseja vender, comprar ou alugar imóvel", "Proprietários que precisam administrar ou regularizar imóveis", "Clientes que buscam avaliação e orientação imobiliária"],
       images: [
-        "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1100&q=80",
-        "https://images.unsplash.com/photo-1554224154-26032ffc0d07?auto=format&fit=crop&w=1100&q=80",
-        "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1100&q=80"
+        "images-slider/slider-imoveis.png"
       ]
     },
     {
       category: "Certificados Digitais",
       title: "Certificados Digitais",
-      intro: "Suporte para empresas e profissionais que precisam de organização contábil, certificados digitais e documentação em dia.",
-      text: "A frente empresarial atua em abertura de empresas, certificados digitais, folha de pagamento, regularizações e documentação. O processo foi pensado para simplificar demandas administrativas e ajudar o cliente a manter sua operação mais organizada.",
-      benefits: "Atendimento centralizado, orientação sobre documentos, mais agilidade em processos empresariais e suporte para manter obrigações administrativas sob controle.",
-      items: ["Empreendedores em fase de abertura de empresa", "Empresas que precisam de certificado digital", "Negócios que buscam suporte contábil e documental"],
+      intro: "Emissão e orientação para uso de certificados digitais em rotinas fiscais, empresariais, documentais e de identificação eletrônica.",
+      text: "O atendimento orienta o cliente sobre o certificado mais adequado, como e-CPF ou e-CNPJ, documentos necessários, validade e formas de utilização. Também oferece suporte para consultas cadastrais e demandas que exigem identificação digital segura.",
+      benefits: "Mais agilidade em processos digitais, redução de dúvidas na emissão, orientação sobre o uso correto do certificado e suporte para pessoas físicas e jurídicas.",
+      items: ["Empresas que precisam emitir notas e cumprir obrigações digitais", "Profissionais que assinam documentos eletrônicos", "Clientes que precisam de e-CPF, e-CNPJ ou consultas cadastrais"],
       images: [
         "images-slider/slider-certificados.png"
       ]
@@ -134,16 +132,16 @@ const App = (() => {
       category: "Empresarial",
       title: "Contabilidade e documentação",
       intro: "Suporte para empresas e profissionais que precisam de organização contábil, certificados digitais e documentação em dia.",
-      text: "A frente empresarial atua em abertura de empresas, certificados digitais, folha de pagamento, regularizações e documentação. O processo foi pensado para simplificar demandas administrativas e ajudar o cliente a manter sua operação mais organizada.",
+      text: "A frente empresarial atua em abertura de empresas, regularizações, folha de pagamento, organização documental e suporte contábil. O processo foi pensado para simplificar demandas administrativas e ajudar o cliente a manter sua operação mais organizada.",
       benefits: "Atendimento centralizado, orientação sobre documentos, mais agilidade em processos empresariais e suporte para manter obrigações administrativas sob controle.",
-      items: ["Empreendedores em fase de abertura de empresa", "Empresas que precisam de certificado digital", "Negócios que buscam suporte contábil e documental"],
+      items: ["Empreendedores em fase de abertura de empresa", "Empresas que precisam regularizar documentação", "Negócios que buscam suporte contábil e administrativo"],
       images: [
         "images-slider/slider-contabilidade.png",
         "images-slider/slider-contabilidade2.png",
         "images-slider/slider-contabilidade3.png",
         "images-slider/slider-contabilidade4.png",
         "images-slider/slider-documentos.png",
-        "images-slider/slider-documentos2.png",
+        "images-slider/slider-documentos2.jpeg",
         "images-slider/slider-documentos3.png",
         "images-slider/slider-documentos4.png"
       ]
@@ -337,4 +335,3 @@ const App = (() => {
 })();
 
 App.init();
-

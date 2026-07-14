@@ -88,7 +88,7 @@ const RealEstatePage = (() => {
         <p><i data-lucide="navigation"></i> ${property.neighborhood}</p>
         <p><i data-lucide="building-2"></i> ${property.city}</p>
         <div class="property-actions">
-          <a class="button button-primary" href="${property.learn_more_url || "https://gomeserosiane.com.br"}" target="_blank" rel="noopener"><i data-lucide="info"></i> Saiba mais</a>
+          <a class="button button-primary" href="${property.learn_more_url || window.APP_CONFIG.DEFAULT_PROPERTY_LINK}" target="_blank" rel="noopener"><i data-lucide="info"></i> Saiba mais</a>
           <a class="button button-whatsapp" href="https://wa.me/5591981643641?text=${encodeURIComponent(`Olá, gostaria de saber mais sobre o imóvel: ${property.title}`)}" target="_blank" rel="noopener"><i data-lucide="message-circle"></i> Entre em contato</a>
         </div>
       </div>
