@@ -62,7 +62,8 @@
     grid-template-columns: 1fr;
   }
 
-  .blog-card img {
+  .blog-card > img,
+  .blog-card > video {
     height: 330px;
     min-height: 330px;
   }

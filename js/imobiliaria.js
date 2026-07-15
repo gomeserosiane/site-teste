@@ -3,7 +3,7 @@ const RealEstatePage = (() => {
   const listElement = document.getElementById("property-list");
   const filterButtons = [...document.querySelectorAll("[data-property-filter]")];
   const lightbox = document.getElementById("property-lightbox");
-  const lightboxImage = document.getElementById("property-lightbox-image");
+  const lightboxMedia = document.getElementById("property-lightbox-media");
   const lightboxClose = document.getElementById("property-lightbox-close");
   const lightboxPrev = document.getElementById("property-lightbox-prev");
   const lightboxNext = document.getElementById("property-lightbox-next");
@@ -23,13 +23,28 @@ const RealEstatePage = (() => {
     return properties.filter((property) => property.status === activeFilter);
   }
 
+  // Identifica se a mídia cadastrada é vídeo pelo tipo base64 ou extensão.
+  function isVideoMedia(media) {
+    return String(media || "").startsWith("data:video") || /\.(mp4|webm|ogg)$/i.test(String(media || ""));
+  }
+
+  // Cria o HTML de imagem ou vídeo para os cards e para a visualização ampliada.
+  function createMediaMarkup(media, altText, attributes = "", withControls = false) {
+    if (isVideoMedia(media)) {
+      const controls = withControls ? "controls" : "";
+      return `<video src="${media}" ${attributes} ${controls} muted playsinline preload="metadata" aria-label="${altText}"></video>`;
+    }
+
+    return `<img src="${media}" alt="${altText}" ${attributes}>`;
+  }
+
   function renderLightboxImage() {
     if (!lightboxProperty) return;
 
-    lightboxImage.src = lightboxProperty.images[lightboxIndex];
-    lightboxImage.alt = `${lightboxProperty.title} - foto ${lightboxIndex + 1}`;
+    const media = lightboxProperty.images[lightboxIndex];
+    lightboxMedia.innerHTML = createMediaMarkup(media, `${lightboxProperty.title} - mídia ${lightboxIndex + 1}`, "", true);
     lightboxDots.innerHTML = lightboxProperty.images.map((_, index) => (
-      `<button class="${index === lightboxIndex ? "active" : ""}" type="button" data-lightbox-dot="${index}" aria-label="Ver foto ${index + 1}"></button>`
+      `<button class="${index === lightboxIndex ? "active" : ""}" type="button" data-lightbox-dot="${index}" aria-label="Ver mídia ${index + 1}"></button>`
     )).join("");
     lucide.createIcons();
   }
@@ -45,7 +60,7 @@ const RealEstatePage = (() => {
   function closeLightbox() {
     lightbox.classList.add("hidden");
     document.body.classList.remove("property-lightbox-open");
-    lightboxImage.removeAttribute("src");
+    lightboxMedia.innerHTML = "";
     lightboxDots.innerHTML = "";
     lightboxProperty = null;
     lightboxIndex = 0;
@@ -65,7 +80,7 @@ const RealEstatePage = (() => {
 
   function createPropertyCard(property) {
     const activeIndex = activeImages[property.id] || 0;
-    const image = property.images[activeIndex] || property.images[0];
+    const media = property.images[activeIndex] || property.images[0];
     const article = document.createElement("article");
     article.className = "property-card";
     article.innerHTML = `
@@ -73,12 +88,12 @@ const RealEstatePage = (() => {
         <button class="property-arrow property-arrow-left" type="button" aria-label="Foto anterior" data-property-prev="${property.id}">
           <i data-lucide="chevron-left"></i>
         </button>
-        <img src="${image}" alt="${property.title}" data-property-expand="${property.id}">
+        ${createMediaMarkup(media, property.title, `data-property-expand="${property.id}"`)}
         <button class="property-arrow property-arrow-right" type="button" aria-label="Próxima foto" data-property-next="${property.id}">
           <i data-lucide="chevron-right"></i>
         </button>
         <div class="property-thumbs">
-          ${property.images.map((item, index) => `<button class="${index === activeIndex ? "active" : ""}" type="button" data-property-thumb="${property.id}" data-thumb-index="${index}"><img src="${item}" alt="Foto ${index + 1} de ${property.title}"></button>`).join("")}
+          ${property.images.map((item, index) => `<button class="${index === activeIndex ? "active" : ""}" type="button" data-property-thumb="${property.id}" data-thumb-index="${index}">${createMediaMarkup(item, `Mídia ${index + 1} de ${property.title}`)}</button>`).join("")}
         </div>
       </div>
       <div class="property-content">

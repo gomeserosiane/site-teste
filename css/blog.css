@@ -37,11 +37,13 @@
   animation: slideFade 0.45s ease both;
 }
 
-.blog-card img {
+.blog-card > img,
+.blog-card > video {
   width: 100%;
   height: 100%;
   min-height: 560px;
   object-fit: cover;
+  background: #0b1720;
 }
 
 .blog-card-content {

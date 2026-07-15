@@ -14,11 +14,25 @@ const BlogPage = (() => {
     }).format(new Date(dateValue));
   }
 
+  // Identifica se a mídia cadastrada é um vídeo para renderizar o elemento correto.
+  function isVideoMedia(media) {
+    return String(media || "").startsWith("data:video") || /\.(mp4|webm|ogg)$/i.test(String(media || ""));
+  }
+
+  // Monta a mídia principal do post, aceitando imagem ou vídeo importado pelo CRM.
+  function createMediaMarkup(media, altText) {
+    if (isVideoMedia(media)) {
+      return `<video src="${media}" controls muted playsinline preload="metadata" aria-label="${altText}"></video>`;
+    }
+
+    return `<img src="${media}" alt="${altText}">`;
+  }
+
   function createPostCard(post, index) {
     const article = document.createElement("article");
     article.className = `blog-card ${index === activeIndex ? "active" : ""}`;
     article.innerHTML = `
-      <img src="${post.image}" alt="${post.title}">
+      ${createMediaMarkup(post.image, post.title)}
       <div class="blog-card-content">
         <h3>${post.title}</h3>
         <p>${post.content}</p>
